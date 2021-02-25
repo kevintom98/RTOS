@@ -6436,7 +6436,7 @@ Discarded input sections
  .data          0x00000000        0x0 Third-party/FreeRTOS/org/Source/queue.o
  .bss           0x00000000        0x0 Third-party/FreeRTOS/org/Source/queue.o
  .text.xQueueGenericReset
-                0x00000000       0xb4 Third-party/FreeRTOS/org/Source/queue.o
+                0x00000000       0xd0 Third-party/FreeRTOS/org/Source/queue.o
  .text.xQueueGenericCreate
                 0x00000000       0x72 Third-party/FreeRTOS/org/Source/queue.o
  .text.prvInitialiseNewQueue
@@ -6452,17 +6452,17 @@ Discarded input sections
  .text.xQueueCreateCountingSemaphore
                 0x00000000       0x62 Third-party/FreeRTOS/org/Source/queue.o
  .text.xQueueGenericSend
-                0x00000000      0x1e8 Third-party/FreeRTOS/org/Source/queue.o
+                0x00000000      0x214 Third-party/FreeRTOS/org/Source/queue.o
  .text.xQueueGenericSendFromISR
                 0x00000000      0x150 Third-party/FreeRTOS/org/Source/queue.o
  .text.xQueueGiveFromISR
                 0x00000000      0x13a Third-party/FreeRTOS/org/Source/queue.o
  .text.xQueueReceive
-                0x00000000      0x1e4 Third-party/FreeRTOS/org/Source/queue.o
+                0x00000000      0x1f8 Third-party/FreeRTOS/org/Source/queue.o
  .text.xQueueSemaphoreTake
-                0x00000000      0x238 Third-party/FreeRTOS/org/Source/queue.o
+                0x00000000      0x24c Third-party/FreeRTOS/org/Source/queue.o
  .text.xQueuePeek
-                0x00000000      0x1a0 Third-party/FreeRTOS/org/Source/queue.o
+                0x00000000      0x1b8 Third-party/FreeRTOS/org/Source/queue.o
  .text.xQueueReceiveFromISR
                 0x00000000      0x136 Third-party/FreeRTOS/org/Source/queue.o
  .text.xQueuePeekFromISR
@@ -6547,8 +6547,8 @@ Discarded input sections
  .debug_macro   0x00000000       0xb5 Third-party/FreeRTOS/org/Source/queue.o
  .debug_macro   0x00000000       0x8c Third-party/FreeRTOS/org/Source/queue.o
  .debug_macro   0x00000000       0x86 Third-party/FreeRTOS/org/Source/queue.o
- .debug_line    0x00000000      0xf46 Third-party/FreeRTOS/org/Source/queue.o
- .debug_str     0x00000000     0xed4d Third-party/FreeRTOS/org/Source/queue.o
+ .debug_line    0x00000000      0xf4d Third-party/FreeRTOS/org/Source/queue.o
+ .debug_str     0x00000000     0xed63 Third-party/FreeRTOS/org/Source/queue.o
  .comment       0x00000000       0x80 Third-party/FreeRTOS/org/Source/queue.o
  .debug_frame   0x00000000      0x51c Third-party/FreeRTOS/org/Source/queue.o
  .ARM.attributes
@@ -6737,13 +6737,13 @@ Discarded input sections
  .text.uxTaskPriorityGetFromISR
                 0x00000000       0x58 Third-party/FreeRTOS/org/Source/tasks.o
  .text.vTaskPrioritySet
-                0x00000000      0x170 Third-party/FreeRTOS/org/Source/tasks.o
+                0x00000000      0x188 Third-party/FreeRTOS/org/Source/tasks.o
  .text.vTaskSuspend
                 0x00000000      0x140 Third-party/FreeRTOS/org/Source/tasks.o
  .text.prvTaskIsTaskSuspended
                 0x00000000       0x74 Third-party/FreeRTOS/org/Source/tasks.o
  .text.vTaskResume
-                0x00000000       0xb4 Third-party/FreeRTOS/org/Source/tasks.o
+                0x00000000       0xd4 Third-party/FreeRTOS/org/Source/tasks.o
  .text.xTaskResumeFromISR
                 0x00000000       0xf8 Third-party/FreeRTOS/org/Source/tasks.o
  .text.vTaskEndScheduler
@@ -6803,7 +6803,7 @@ Discarded input sections
  .text.xTaskNotifyWait
                 0x00000000       0xc8 Third-party/FreeRTOS/org/Source/tasks.o
  .text.xTaskGenericNotify
-                0x00000000      0x144 Third-party/FreeRTOS/org/Source/tasks.o
+                0x00000000      0x164 Third-party/FreeRTOS/org/Source/tasks.o
  .text.xTaskGenericNotifyFromISR
                 0x00000000      0x1b4 Third-party/FreeRTOS/org/Source/tasks.o
  .text.vTaskNotifyGiveFromISR
@@ -7939,7 +7939,7 @@ LOAD d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-no
                 0x08000000                g_pfnVectors
                 0x080001c4                . = ALIGN (0x4)
 
-.text           0x08000200     0x3aac
+.text           0x08000200     0x3b2c
                 0x08000200                . = ALIGN (0x4)
  *(.text)
  .text          0x08000200       0x40 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
@@ -8019,406 +8019,405 @@ LOAD d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-no
  .text.prvInitialiseNewTask
                 0x08000e70      0x10c Third-party/FreeRTOS/org/Source/tasks.o
  .text.prvAddNewTaskToReadyList
-                0x08000f7c       0xfc Third-party/FreeRTOS/org/Source/tasks.o
+                0x08000f7c      0x118 Third-party/FreeRTOS/org/Source/tasks.o
  .text.vTaskStartScheduler
-                0x08001078       0x8c Third-party/FreeRTOS/org/Source/tasks.o
-                0x08001078                vTaskStartScheduler
+                0x08001094       0x8c Third-party/FreeRTOS/org/Source/tasks.o
+                0x08001094                vTaskStartScheduler
  .text.vTaskSuspendAll
-                0x08001104       0x1c Third-party/FreeRTOS/org/Source/tasks.o
-                0x08001104                vTaskSuspendAll
+                0x08001120       0x1c Third-party/FreeRTOS/org/Source/tasks.o
+                0x08001120                vTaskSuspendAll
  .text.xTaskResumeAll
-                0x08001120      0x124 Third-party/FreeRTOS/org/Source/tasks.o
-                0x08001120                xTaskResumeAll
+                0x0800113c      0x140 Third-party/FreeRTOS/org/Source/tasks.o
+                0x0800113c                xTaskResumeAll
  .text.xTaskGetTickCountFromISR
-                0x08001244       0x24 Third-party/FreeRTOS/org/Source/tasks.o
-                0x08001244                xTaskGetTickCountFromISR
+                0x0800127c       0x24 Third-party/FreeRTOS/org/Source/tasks.o
+                0x0800127c                xTaskGetTickCountFromISR
  .text.xTaskIncrementTick
-                0x08001268      0x13c Third-party/FreeRTOS/org/Source/tasks.o
-                0x08001268                xTaskIncrementTick
+                0x080012a0      0x180 Third-party/FreeRTOS/org/Source/tasks.o
+                0x080012a0                xTaskIncrementTick
  .text.vTaskSwitchContext
-                0x080013a4       0xd0 Third-party/FreeRTOS/org/Source/tasks.o
-                0x080013a4                vTaskSwitchContext
+                0x08001420       0xd0 Third-party/FreeRTOS/org/Source/tasks.o
+                0x08001420                vTaskSwitchContext
  .text.prvIdleTask
-                0x08001474       0x24 Third-party/FreeRTOS/org/Source/tasks.o
+                0x080014f0       0x30 Third-party/FreeRTOS/org/Source/tasks.o
  .text.prvInitialiseTaskLists
-                0x08001498       0x80 Third-party/FreeRTOS/org/Source/tasks.o
+                0x08001520       0x80 Third-party/FreeRTOS/org/Source/tasks.o
  .text.prvCheckTasksWaitingTermination
-                0x08001518       0x58 Third-party/FreeRTOS/org/Source/tasks.o
+                0x080015a0       0x58 Third-party/FreeRTOS/org/Source/tasks.o
  .text.prvDeleteTCB
-                0x08001570       0x20 Third-party/FreeRTOS/org/Source/tasks.o
+                0x080015f8       0x20 Third-party/FreeRTOS/org/Source/tasks.o
  .text.prvResetNextTaskUnblockTime
-                0x08001590       0x4c Third-party/FreeRTOS/org/Source/tasks.o
+                0x08001618       0x4c Third-party/FreeRTOS/org/Source/tasks.o
  .text.pxPortInitialiseStack
-                0x080015dc       0x68 Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
-                0x080015dc                pxPortInitialiseStack
+                0x08001664       0x68 Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
+                0x08001664                pxPortInitialiseStack
  .text.prvTaskExitError
-                0x08001644       0x54 Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
- *fill*         0x08001698        0x8 
+                0x080016cc       0x54 Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
  .text.SVC_Handler
-                0x080016a0       0x28 Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
-                0x080016a0                SVC_Handler
+                0x08001720       0x28 Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
+                0x08001720                SVC_Handler
  .text.prvPortStartFirstTask
-                0x080016c8       0x28 Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
+                0x08001748       0x28 Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
  .text.xPortStartScheduler
-                0x080016f0      0x13c Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
-                0x080016f0                xPortStartScheduler
+                0x08001770      0x13c Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
+                0x08001770                xPortStartScheduler
  .text.vPortEnterCritical
-                0x0800182c       0x5c Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
-                0x0800182c                vPortEnterCritical
+                0x080018ac       0x5c Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
+                0x080018ac                vPortEnterCritical
  .text.vPortExitCritical
-                0x08001888       0x50 Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
-                0x08001888                vPortExitCritical
- *fill*         0x080018d8        0x8 
+                0x08001908       0x50 Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
+                0x08001908                vPortExitCritical
+ *fill*         0x08001958        0x8 
  .text.PendSV_Handler
-                0x080018e0       0x68 Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
-                0x080018e0                PendSV_Handler
+                0x08001960       0x68 Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
+                0x08001960                PendSV_Handler
  .text.SysTick_Handler
-                0x08001948       0x50 Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
-                0x08001948                SysTick_Handler
+                0x080019c8       0x50 Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
+                0x080019c8                SysTick_Handler
  .text.vPortSetupTimerInterrupt
-                0x08001998       0x48 Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
-                0x08001998                vPortSetupTimerInterrupt
+                0x08001a18       0x48 Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
+                0x08001a18                vPortSetupTimerInterrupt
  .text.vPortEnableVFP
-                0x080019e0       0x14 Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
+                0x08001a60       0x14 Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
  .text.vPortValidateInterruptPriority
-                0x080019f4       0x7c Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
-                0x080019f4                vPortValidateInterruptPriority
+                0x08001a74       0x7c Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
+                0x08001a74                vPortValidateInterruptPriority
  .text.pvPortMalloc
-                0x08001a70      0x184 Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.o
-                0x08001a70                pvPortMalloc
+                0x08001af0      0x184 Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.o
+                0x08001af0                pvPortMalloc
  .text.vPortFree
-                0x08001bf4       0xb0 Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.o
-                0x08001bf4                vPortFree
+                0x08001c74       0xb0 Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.o
+                0x08001c74                vPortFree
  .text.prvHeapInit
-                0x08001ca4       0xc4 Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.o
+                0x08001d24       0xc4 Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.o
  .text.prvInsertBlockIntoFreeList
-                0x08001d68       0xb4 Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.o
+                0x08001de8       0xb4 Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.o
  .text._cbSendSystemDesc
-                0x08001e1c       0x1c Third-party/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.o
+                0x08001e9c       0x1c Third-party/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.o
  .text.SEGGER_SYSVIEW_Conf
-                0x08001e38       0x2c Third-party/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.o
-                0x08001e38                SEGGER_SYSVIEW_Conf
+                0x08001eb8       0x2c Third-party/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.o
+                0x08001eb8                SEGGER_SYSVIEW_Conf
  .text._cbSendTaskList
-                0x08001e64       0x90 Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o
+                0x08001ee4       0x90 Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o
  .text._cbGetTime
-                0x08001ef4       0x84 Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o
+                0x08001f74       0x84 Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o
  .text.SYSVIEW_AddTask
-                0x08001f78       0xd0 Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o
-                0x08001f78                SYSVIEW_AddTask
+                0x08001ff8       0xd0 Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o
+                0x08001ff8                SYSVIEW_AddTask
  .text.SYSVIEW_SendTaskInfo
-                0x08002048       0x42 Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o
-                0x08002048                SYSVIEW_SendTaskInfo
- *fill*         0x0800208a        0x2 
- .text._DoInit  0x0800208c       0xa4 Third-party/SEGGER/SEGGER/SEGGER_RTT.o
+                0x080020c8       0x42 Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o
+                0x080020c8                SYSVIEW_SendTaskInfo
+ *fill*         0x0800210a        0x2 
+ .text._DoInit  0x0800210c       0xa4 Third-party/SEGGER/SEGGER/SEGGER_RTT.o
  .text.SEGGER_RTT_ReadNoLock
-                0x08002130      0x104 Third-party/SEGGER/SEGGER/SEGGER_RTT.o
-                0x08002130                SEGGER_RTT_ReadNoLock
+                0x080021b0      0x104 Third-party/SEGGER/SEGGER/SEGGER_RTT.o
+                0x080021b0                SEGGER_RTT_ReadNoLock
  .text.SEGGER_RTT_WriteSkipNoLock
-                0x08002234      0x120 Third-party/SEGGER/SEGGER/SEGGER_RTT.o
-                0x08002234                SEGGER_RTT_WriteSkipNoLock
+                0x080022b4      0x120 Third-party/SEGGER/SEGGER/SEGGER_RTT.o
+                0x080022b4                SEGGER_RTT_WriteSkipNoLock
  .text.SEGGER_RTT_ConfigUpBuffer
-                0x08002354       0xd4 Third-party/SEGGER/SEGGER/SEGGER_RTT.o
-                0x08002354                SEGGER_RTT_ConfigUpBuffer
+                0x080023d4       0xd4 Third-party/SEGGER/SEGGER/SEGGER_RTT.o
+                0x080023d4                SEGGER_RTT_ConfigUpBuffer
  .text.SEGGER_RTT_ConfigDownBuffer
-                0x08002428       0xd4 Third-party/SEGGER/SEGGER/SEGGER_RTT.o
-                0x08002428                SEGGER_RTT_ConfigDownBuffer
+                0x080024a8       0xd4 Third-party/SEGGER/SEGGER/SEGGER_RTT.o
+                0x080024a8                SEGGER_RTT_ConfigDownBuffer
  .text._EncodeStr
-                0x080024fc       0x9a Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x0800257c       0x9a Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
  .text._PreparePacket
-                0x08002596       0x18 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x08002616       0x18 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
  .text._HandleIncomingPacket
-                0x080025ae       0xb8 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
- *fill*         0x08002666        0x2 
+                0x0800262e       0xb8 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+ *fill*         0x080026e6        0x2 
  .text._TrySendOverflowPacket
-                0x08002668       0xe0 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x080026e8       0xe0 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
  .text._SendPacket
-                0x08002748      0x1a8 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x080027c8      0x1a8 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
  .text.SEGGER_SYSVIEW_Init
-                0x080028f0       0x7c Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x080028f0                SEGGER_SYSVIEW_Init
+                0x08002970       0x7c Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x08002970                SEGGER_SYSVIEW_Init
  .text.SEGGER_SYSVIEW_SetRAMBase
-                0x0800296c       0x20 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x0800296c                SEGGER_SYSVIEW_SetRAMBase
+                0x080029ec       0x20 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x080029ec                SEGGER_SYSVIEW_SetRAMBase
  .text.SEGGER_SYSVIEW_RecordVoid
-                0x0800298c       0x3c Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x0800298c                SEGGER_SYSVIEW_RecordVoid
+                0x08002a0c       0x3c Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x08002a0c                SEGGER_SYSVIEW_RecordVoid
  .text.SEGGER_SYSVIEW_RecordU32
-                0x080029c8       0x78 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x080029c8                SEGGER_SYSVIEW_RecordU32
+                0x08002a48       0x78 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x08002a48                SEGGER_SYSVIEW_RecordU32
  .text.SEGGER_SYSVIEW_RecordU32x2
-                0x08002a40       0xb4 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x08002a40                SEGGER_SYSVIEW_RecordU32x2
+                0x08002ac0       0xb4 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x08002ac0                SEGGER_SYSVIEW_RecordU32x2
  .text.SEGGER_SYSVIEW_Start
-                0x08002af4      0x178 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x08002af4                SEGGER_SYSVIEW_Start
+                0x08002b74      0x178 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x08002b74                SEGGER_SYSVIEW_Start
  .text.SEGGER_SYSVIEW_Stop
-                0x08002c6c       0x4c Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x08002c6c                SEGGER_SYSVIEW_Stop
+                0x08002cec       0x4c Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x08002cec                SEGGER_SYSVIEW_Stop
  .text.SEGGER_SYSVIEW_GetSysDesc
-                0x08002cb8      0x134 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x08002cb8                SEGGER_SYSVIEW_GetSysDesc
+                0x08002d38      0x134 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x08002d38                SEGGER_SYSVIEW_GetSysDesc
  .text.SEGGER_SYSVIEW_SendTaskInfo
-                0x08002dec      0x1cc Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x08002dec                SEGGER_SYSVIEW_SendTaskInfo
+                0x08002e6c      0x1cc Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x08002e6c                SEGGER_SYSVIEW_SendTaskInfo
  .text.SEGGER_SYSVIEW_SendTaskList
-                0x08002fb8       0x28 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x08002fb8                SEGGER_SYSVIEW_SendTaskList
+                0x08003038       0x28 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x08003038                SEGGER_SYSVIEW_SendTaskList
  .text.SEGGER_SYSVIEW_SendSysDesc
-                0x08002fe0       0x48 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x08002fe0                SEGGER_SYSVIEW_SendSysDesc
+                0x08003060       0x48 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x08003060                SEGGER_SYSVIEW_SendSysDesc
  .text.SEGGER_SYSVIEW_RecordSystime
-                0x08003028       0x60 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x08003028                SEGGER_SYSVIEW_RecordSystime
+                0x080030a8       0x60 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x080030a8                SEGGER_SYSVIEW_RecordSystime
  .text.SEGGER_SYSVIEW_RecordEnterISR
-                0x08003088       0x84 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x08003088                SEGGER_SYSVIEW_RecordEnterISR
+                0x08003108       0x84 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x08003108                SEGGER_SYSVIEW_RecordEnterISR
  .text.SEGGER_SYSVIEW_RecordExitISR
-                0x0800310c       0x38 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x0800310c                SEGGER_SYSVIEW_RecordExitISR
+                0x0800318c       0x38 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x0800318c                SEGGER_SYSVIEW_RecordExitISR
  .text.SEGGER_SYSVIEW_RecordExitISRToScheduler
-                0x08003144       0x38 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x08003144                SEGGER_SYSVIEW_RecordExitISRToScheduler
+                0x080031c4       0x38 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x080031c4                SEGGER_SYSVIEW_RecordExitISRToScheduler
  .text.SEGGER_SYSVIEW_OnIdle
-                0x0800317c       0x38 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x0800317c                SEGGER_SYSVIEW_OnIdle
+                0x080031fc       0x38 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x080031fc                SEGGER_SYSVIEW_OnIdle
  .text.SEGGER_SYSVIEW_OnTaskCreate
-                0x080031b4       0x88 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x080031b4                SEGGER_SYSVIEW_OnTaskCreate
+                0x08003234       0x88 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x08003234                SEGGER_SYSVIEW_OnTaskCreate
  .text.SEGGER_SYSVIEW_OnTaskStartExec
-                0x0800323c       0x88 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x0800323c                SEGGER_SYSVIEW_OnTaskStartExec
+                0x080032bc       0x88 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x080032bc                SEGGER_SYSVIEW_OnTaskStartExec
  .text.SEGGER_SYSVIEW_OnTaskStartReady
-                0x080032c4       0x88 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x080032c4                SEGGER_SYSVIEW_OnTaskStartReady
+                0x08003344       0x88 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x08003344                SEGGER_SYSVIEW_OnTaskStartReady
  .text.SEGGER_SYSVIEW_SendModule
-                0x0800334c      0x100 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x0800334c                SEGGER_SYSVIEW_SendModule
+                0x080033cc      0x100 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x080033cc                SEGGER_SYSVIEW_SendModule
  .text.SEGGER_SYSVIEW_SendModuleDescription
-                0x0800344c       0x3c Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x0800344c                SEGGER_SYSVIEW_SendModuleDescription
+                0x080034cc       0x3c Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x080034cc                SEGGER_SYSVIEW_SendModuleDescription
  .text.SEGGER_SYSVIEW_SendNumModules
-                0x08003488       0x7c Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x08003488                SEGGER_SYSVIEW_SendNumModules
+                0x08003508       0x7c Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x08003508                SEGGER_SYSVIEW_SendNumModules
  .text.SEGGER_SYSVIEW_Print
-                0x08003504       0xb8 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x08003504                SEGGER_SYSVIEW_Print
+                0x08003584       0xb8 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x08003584                SEGGER_SYSVIEW_Print
  .text.SEGGER_SYSVIEW_Warn
-                0x080035bc       0xb8 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
-                0x080035bc                SEGGER_SYSVIEW_Warn
- .text.main     0x08003674       0x9c src/main.o
-                0x08003674                main
+                0x0800363c       0xb8 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+                0x0800363c                SEGGER_SYSVIEW_Warn
+ .text.main     0x080036f4       0x9c src/main.o
+                0x080036f4                main
  .text.vTask1_handler
-                0x08003710       0x50 src/main.o
-                0x08003710                vTask1_handler
+                0x08003790       0x50 src/main.o
+                0x08003790                vTask1_handler
  .text.vTask2_handler
-                0x08003760       0x50 src/main.o
-                0x08003760                vTask2_handler
+                0x080037e0       0x50 src/main.o
+                0x080037e0                vTask2_handler
  .text.prvSetupUART
-                0x080037b0       0x9c src/main.o
+                0x08003830       0x9c src/main.o
  .text.prvSetupHardware
-                0x0800384c        0xc src/main.o
+                0x080038cc        0xc src/main.o
  .text.printmsg
-                0x08003858       0x50 src/main.o
-                0x08003858                printmsg
+                0x080038d8       0x50 src/main.o
+                0x080038d8                printmsg
  .text.SystemInit
-                0x080038a8       0x6c src/system_stm32f4xx.o
-                0x080038a8                SystemInit
+                0x08003928       0x6c src/system_stm32f4xx.o
+                0x08003928                SystemInit
  .text.SystemCoreClockUpdate
-                0x08003914      0x19c src/system_stm32f4xx.o
-                0x08003914                SystemCoreClockUpdate
+                0x08003994      0x19c src/system_stm32f4xx.o
+                0x08003994                SystemCoreClockUpdate
  .text.SetSysClock
-                0x08003ab0      0x12c src/system_stm32f4xx.o
+                0x08003b30      0x12c src/system_stm32f4xx.o
  .text.Reset_Handler
-                0x08003bdc       0x50 startup/startup_stm32.o
-                0x08003bdc                Reset_Handler
+                0x08003c5c       0x50 startup/startup_stm32.o
+                0x08003c5c                Reset_Handler
  .text.Default_Handler
-                0x08003c2c        0x2 startup/startup_stm32.o
-                0x08003c2c                RTC_Alarm_IRQHandler
-                0x08003c2c                EXTI2_IRQHandler
-                0x08003c2c                TIM8_CC_IRQHandler
-                0x08003c2c                SPDIF_Rx_IRQHandler
-                0x08003c2c                DebugMon_Handler
-                0x08003c2c                SPI4_IRQHandler
-                0x08003c2c                TIM1_CC_IRQHandler
-                0x08003c2c                QuadSPI_IRQHandler
-                0x08003c2c                DMA2_Stream5_IRQHandler
-                0x08003c2c                HardFault_Handler
-                0x08003c2c                DMA1_Stream5_IRQHandler
-                0x08003c2c                PVD_IRQHandler
-                0x08003c2c                SDIO_IRQHandler
-                0x08003c2c                TAMP_STAMP_IRQHandler
-                0x08003c2c                NMI_Handler
-                0x08003c2c                CAN2_RX1_IRQHandler
-                0x08003c2c                EXTI3_IRQHandler
-                0x08003c2c                TIM8_TRG_COM_TIM14_IRQHandler
-                0x08003c2c                TIM1_UP_TIM10_IRQHandler
-                0x08003c2c                FMPI2C1_error_IRQHandler
-                0x08003c2c                TIM8_UP_TIM13_IRQHandler
-                0x08003c2c                I2C3_ER_IRQHandler
-                0x08003c2c                EXTI0_IRQHandler
-                0x08003c2c                I2C2_EV_IRQHandler
-                0x08003c2c                DMA1_Stream2_IRQHandler
-                0x08003c2c                CAN1_RX0_IRQHandler
-                0x08003c2c                FPU_IRQHandler
-                0x08003c2c                OTG_HS_WKUP_IRQHandler
-                0x08003c2c                UsageFault_Handler
-                0x08003c2c                CAN2_SCE_IRQHandler
-                0x08003c2c                DMA2_Stream2_IRQHandler
-                0x08003c2c                SPI1_IRQHandler
-                0x08003c2c                TIM6_DAC_IRQHandler
-                0x08003c2c                TIM1_BRK_TIM9_IRQHandler
-                0x08003c2c                DCMI_IRQHandler
-                0x08003c2c                CAN2_RX0_IRQHandler
-                0x08003c2c                DMA2_Stream3_IRQHandler
-                0x08003c2c                FMPI2C1_IRQHandler
-                0x08003c2c                SAI2_IRQHandler
-                0x08003c2c                USART6_IRQHandler
-                0x08003c2c                USART3_IRQHandler
-                0x08003c2c                CAN1_RX1_IRQHandler
-                0x08003c2c                UART5_IRQHandler
-                0x08003c2c                DMA2_Stream0_IRQHandler
-                0x08003c2c                TIM4_IRQHandler
-                0x08003c2c                I2C1_EV_IRQHandler
-                0x08003c2c                HDMI_CEC_IRQHandler
-                0x08003c2c                DMA1_Stream6_IRQHandler
-                0x08003c2c                DMA1_Stream1_IRQHandler
-                0x08003c2c                UART4_IRQHandler
-                0x08003c2c                TIM3_IRQHandler
-                0x08003c2c                RCC_IRQHandler
-                0x08003c2c                TIM8_BRK_TIM12_IRQHandler
-                0x08003c2c                Default_Handler
-                0x08003c2c                EXTI15_10_IRQHandler
-                0x08003c2c                ADC_IRQHandler
-                0x08003c2c                DMA1_Stream7_IRQHandler
-                0x08003c2c                TIM7_IRQHandler
-                0x08003c2c                CAN2_TX_IRQHandler
-                0x08003c2c                TIM5_IRQHandler
-                0x08003c2c                DMA2_Stream7_IRQHandler
-                0x08003c2c                I2C3_EV_IRQHandler
-                0x08003c2c                EXTI9_5_IRQHandler
-                0x08003c2c                RTC_WKUP_IRQHandler
-                0x08003c2c                SPI2_IRQHandler
-                0x08003c2c                OTG_HS_EP1_IN_IRQHandler
-                0x08003c2c                MemManage_Handler
-                0x08003c2c                DMA1_Stream0_IRQHandler
-                0x08003c2c                CAN1_TX_IRQHandler
-                0x08003c2c                EXTI4_IRQHandler
-                0x08003c2c                OTG_HS_EP1_OUT_IRQHandler
-                0x08003c2c                WWDG_IRQHandler
-                0x08003c2c                TIM2_IRQHandler
-                0x08003c2c                OTG_FS_WKUP_IRQHandler
-                0x08003c2c                TIM1_TRG_COM_TIM11_IRQHandler
-                0x08003c2c                OTG_HS_IRQHandler
-                0x08003c2c                EXTI1_IRQHandler
-                0x08003c2c                USART2_IRQHandler
-                0x08003c2c                I2C2_ER_IRQHandler
-                0x08003c2c                DMA2_Stream1_IRQHandler
-                0x08003c2c                CAN1_SCE_IRQHandler
-                0x08003c2c                FLASH_IRQHandler
-                0x08003c2c                DMA2_Stream4_IRQHandler
-                0x08003c2c                BusFault_Handler
-                0x08003c2c                USART1_IRQHandler
-                0x08003c2c                OTG_FS_IRQHandler
-                0x08003c2c                SPI3_IRQHandler
-                0x08003c2c                DMA1_Stream4_IRQHandler
-                0x08003c2c                I2C1_ER_IRQHandler
-                0x08003c2c                FMC_IRQHandler
-                0x08003c2c                DMA2_Stream6_IRQHandler
-                0x08003c2c                SAI1_IRQHandler
-                0x08003c2c                DMA1_Stream3_IRQHandler
- *fill*         0x08003c2e        0x2 
- .text.memcmp   0x08003c30       0x64 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc.a(lib_a-memcmp.o)
-                0x08003c30                memcmp
+                0x08003cac        0x2 startup/startup_stm32.o
+                0x08003cac                RTC_Alarm_IRQHandler
+                0x08003cac                EXTI2_IRQHandler
+                0x08003cac                TIM8_CC_IRQHandler
+                0x08003cac                SPDIF_Rx_IRQHandler
+                0x08003cac                DebugMon_Handler
+                0x08003cac                SPI4_IRQHandler
+                0x08003cac                TIM1_CC_IRQHandler
+                0x08003cac                QuadSPI_IRQHandler
+                0x08003cac                DMA2_Stream5_IRQHandler
+                0x08003cac                HardFault_Handler
+                0x08003cac                DMA1_Stream5_IRQHandler
+                0x08003cac                PVD_IRQHandler
+                0x08003cac                SDIO_IRQHandler
+                0x08003cac                TAMP_STAMP_IRQHandler
+                0x08003cac                NMI_Handler
+                0x08003cac                CAN2_RX1_IRQHandler
+                0x08003cac                EXTI3_IRQHandler
+                0x08003cac                TIM8_TRG_COM_TIM14_IRQHandler
+                0x08003cac                TIM1_UP_TIM10_IRQHandler
+                0x08003cac                FMPI2C1_error_IRQHandler
+                0x08003cac                TIM8_UP_TIM13_IRQHandler
+                0x08003cac                I2C3_ER_IRQHandler
+                0x08003cac                EXTI0_IRQHandler
+                0x08003cac                I2C2_EV_IRQHandler
+                0x08003cac                DMA1_Stream2_IRQHandler
+                0x08003cac                CAN1_RX0_IRQHandler
+                0x08003cac                FPU_IRQHandler
+                0x08003cac                OTG_HS_WKUP_IRQHandler
+                0x08003cac                UsageFault_Handler
+                0x08003cac                CAN2_SCE_IRQHandler
+                0x08003cac                DMA2_Stream2_IRQHandler
+                0x08003cac                SPI1_IRQHandler
+                0x08003cac                TIM6_DAC_IRQHandler
+                0x08003cac                TIM1_BRK_TIM9_IRQHandler
+                0x08003cac                DCMI_IRQHandler
+                0x08003cac                CAN2_RX0_IRQHandler
+                0x08003cac                DMA2_Stream3_IRQHandler
+                0x08003cac                FMPI2C1_IRQHandler
+                0x08003cac                SAI2_IRQHandler
+                0x08003cac                USART6_IRQHandler
+                0x08003cac                USART3_IRQHandler
+                0x08003cac                CAN1_RX1_IRQHandler
+                0x08003cac                UART5_IRQHandler
+                0x08003cac                DMA2_Stream0_IRQHandler
+                0x08003cac                TIM4_IRQHandler
+                0x08003cac                I2C1_EV_IRQHandler
+                0x08003cac                HDMI_CEC_IRQHandler
+                0x08003cac                DMA1_Stream6_IRQHandler
+                0x08003cac                DMA1_Stream1_IRQHandler
+                0x08003cac                UART4_IRQHandler
+                0x08003cac                TIM3_IRQHandler
+                0x08003cac                RCC_IRQHandler
+                0x08003cac                TIM8_BRK_TIM12_IRQHandler
+                0x08003cac                Default_Handler
+                0x08003cac                EXTI15_10_IRQHandler
+                0x08003cac                ADC_IRQHandler
+                0x08003cac                DMA1_Stream7_IRQHandler
+                0x08003cac                TIM7_IRQHandler
+                0x08003cac                CAN2_TX_IRQHandler
+                0x08003cac                TIM5_IRQHandler
+                0x08003cac                DMA2_Stream7_IRQHandler
+                0x08003cac                I2C3_EV_IRQHandler
+                0x08003cac                EXTI9_5_IRQHandler
+                0x08003cac                RTC_WKUP_IRQHandler
+                0x08003cac                SPI2_IRQHandler
+                0x08003cac                OTG_HS_EP1_IN_IRQHandler
+                0x08003cac                MemManage_Handler
+                0x08003cac                DMA1_Stream0_IRQHandler
+                0x08003cac                CAN1_TX_IRQHandler
+                0x08003cac                EXTI4_IRQHandler
+                0x08003cac                OTG_HS_EP1_OUT_IRQHandler
+                0x08003cac                WWDG_IRQHandler
+                0x08003cac                TIM2_IRQHandler
+                0x08003cac                OTG_FS_WKUP_IRQHandler
+                0x08003cac                TIM1_TRG_COM_TIM11_IRQHandler
+                0x08003cac                OTG_HS_IRQHandler
+                0x08003cac                EXTI1_IRQHandler
+                0x08003cac                USART2_IRQHandler
+                0x08003cac                I2C2_ER_IRQHandler
+                0x08003cac                DMA2_Stream1_IRQHandler
+                0x08003cac                CAN1_SCE_IRQHandler
+                0x08003cac                FLASH_IRQHandler
+                0x08003cac                DMA2_Stream4_IRQHandler
+                0x08003cac                BusFault_Handler
+                0x08003cac                USART1_IRQHandler
+                0x08003cac                OTG_FS_IRQHandler
+                0x08003cac                SPI3_IRQHandler
+                0x08003cac                DMA1_Stream4_IRQHandler
+                0x08003cac                I2C1_ER_IRQHandler
+                0x08003cac                FMC_IRQHandler
+                0x08003cac                DMA2_Stream6_IRQHandler
+                0x08003cac                SAI1_IRQHandler
+                0x08003cac                DMA1_Stream3_IRQHandler
+ *fill*         0x08003cae        0x2 
+ .text.memcmp   0x08003cb0       0x64 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc.a(lib_a-memcmp.o)
+                0x08003cb0                memcmp
  *(.glue_7)
- .glue_7        0x08003c94        0x0 linker stubs
+ .glue_7        0x08003d14        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08003c94        0x0 linker stubs
+ .glue_7t       0x08003d14        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08003c94        0x0 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .eh_frame      0x08003d14        0x0 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
  *(.init)
- .init          0x08003c94        0x4 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
-                0x08003c94                _init
- .init          0x08003c98        0x8 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+ .init          0x08003d14        0x4 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                0x08003d14                _init
+ .init          0x08003d18        0x8 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
  *(.fini)
- .fini          0x08003ca0        0x4 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
-                0x08003ca0                _fini
- .fini          0x08003ca4        0x8 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
-                0x08003cac                . = ALIGN (0x4)
-                0x08003cac                _etext = .
+ .fini          0x08003d20        0x4 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                0x08003d20                _fini
+ .fini          0x08003d24        0x8 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+                0x08003d2c                . = ALIGN (0x4)
+                0x08003d2c                _etext = .
 
-.vfp11_veneer   0x08003cac        0x0
- .vfp11_veneer  0x08003cac        0x0 linker stubs
+.vfp11_veneer   0x08003d2c        0x0
+ .vfp11_veneer  0x08003d2c        0x0 linker stubs
 
-.v4_bx          0x08003cac        0x0
- .v4_bx         0x08003cac        0x0 linker stubs
+.v4_bx          0x08003d2c        0x0
+ .v4_bx         0x08003d2c        0x0 linker stubs
 
-.iplt           0x08003cac        0x0
- .iplt          0x08003cac        0x0 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+.iplt           0x08003d2c        0x0
+ .iplt          0x08003d2c        0x0 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.rodata         0x08003cac      0x198
-                0x08003cac                . = ALIGN (0x4)
+.rodata         0x08003d2c      0x198
+                0x08003d2c                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x08003cac        0x5 Third-party/FreeRTOS/org/Source/tasks.o
- *fill*         0x08003cb1        0x3 
- .rodata        0x08003cb4       0x51 Third-party/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.o
- *fill*         0x08003d05        0x3 
- .rodata        0x08003d08       0x60 Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o
-                0x08003d60                SYSVIEW_X_OS_TraceAPI
- .rodata        0x08003d68       0x17 Third-party/SEGGER/SEGGER/SEGGER_RTT.o
- *fill*         0x08003d7f        0x1 
- .rodata        0x08003d80       0x24 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
- .rodata        0x08003da4       0x9b src/main.o
+ .rodata        0x08003d2c        0x5 Third-party/FreeRTOS/org/Source/tasks.o
+ *fill*         0x08003d31        0x3 
+ .rodata        0x08003d34       0x51 Third-party/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.o
+ *fill*         0x08003d85        0x3 
+ .rodata        0x08003d88       0x60 Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o
+                0x08003de0                SYSVIEW_X_OS_TraceAPI
+ .rodata        0x08003de8       0x17 Third-party/SEGGER/SEGGER/SEGGER_RTT.o
+ *fill*         0x08003dff        0x1 
+ .rodata        0x08003e00       0x24 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+ .rodata        0x08003e24       0x9b src/main.o
  *(.rodata*)
- *fill*         0x08003e3f        0x1 
+ *fill*         0x08003ebf        0x1 
  .rodata._global_impure_ptr
-                0x08003e40        0x4 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc.a(lib_a-impure.o)
-                0x08003e40                _global_impure_ptr
-                0x08003e44                . = ALIGN (0x4)
+                0x08003ec0        0x4 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc.a(lib_a-impure.o)
+                0x08003ec0                _global_impure_ptr
+                0x08003ec4                . = ALIGN (0x4)
 
-.rel.dyn        0x08003e44        0x0
- .rel.iplt      0x08003e44        0x0 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+.rel.dyn        0x08003ec4        0x0
+ .rel.iplt      0x08003ec4        0x0 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.ARM.extab      0x08003e44        0x0
-                0x08003e44                . = ALIGN (0x4)
+.ARM.extab      0x08003ec4        0x0
+                0x08003ec4                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08003e44                . = ALIGN (0x4)
+                0x08003ec4                . = ALIGN (0x4)
 
-.ARM            0x08003e44        0x0
-                0x08003e44                . = ALIGN (0x4)
-                0x08003e44                __exidx_start = .
+.ARM            0x08003ec4        0x0
+                0x08003ec4                . = ALIGN (0x4)
+                0x08003ec4                __exidx_start = .
  *(.ARM.exidx*)
-                0x08003e44                __exidx_end = .
-                0x08003e44                . = ALIGN (0x4)
+                0x08003ec4                __exidx_end = .
+                0x08003ec4                . = ALIGN (0x4)
 
-.preinit_array  0x08003e44        0x0
-                0x08003e44                . = ALIGN (0x4)
-                0x08003e44                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08003ec4        0x0
+                0x08003ec4                . = ALIGN (0x4)
+                0x08003ec4                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08003e44                PROVIDE (__preinit_array_end = .)
-                0x08003e44                . = ALIGN (0x4)
+                0x08003ec4                PROVIDE (__preinit_array_end = .)
+                0x08003ec4                . = ALIGN (0x4)
 
-.init_array     0x08003e44        0x8
-                0x08003e44                . = ALIGN (0x4)
-                0x08003e44                PROVIDE (__init_array_start = .)
+.init_array     0x08003ec4        0x8
+                0x08003ec4                . = ALIGN (0x4)
+                0x08003ec4                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x08003e44        0x4 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc.a(lib_a-__call_atexit.o)
+                0x08003ec4        0x4 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc.a(lib_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x08003e48        0x4 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
-                0x08003e4c                PROVIDE (__init_array_end = .)
-                0x08003e4c                . = ALIGN (0x4)
+ .init_array    0x08003ec8        0x4 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+                0x08003ecc                PROVIDE (__init_array_end = .)
+                0x08003ecc                . = ALIGN (0x4)
 
-.fini_array     0x08003e4c        0x4
-                0x08003e4c                . = ALIGN (0x4)
-                0x08003e4c                PROVIDE (__fini_array_start = .)
+.fini_array     0x08003ecc        0x4
+                0x08003ecc                . = ALIGN (0x4)
+                0x08003ecc                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08003e4c        0x4 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
-                0x08003e50                PROVIDE (__fini_array_end = .)
-                0x08003e50                . = ALIGN (0x4)
-                0x08003e50                _sidata = LOADADDR (.data)
+ .fini_array    0x08003ecc        0x4 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+                0x08003ed0                PROVIDE (__fini_array_end = .)
+                0x08003ed0                . = ALIGN (0x4)
+                0x08003ed0                _sidata = LOADADDR (.data)
 
-.data           0x20000000      0x45c load address 0x08003e50
+.data           0x20000000      0x45c load address 0x08003ed0
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -8440,11 +8439,11 @@ LOAD d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-no
                 0x2000045c                . = ALIGN (0x4)
                 0x2000045c                _edata = .
 
-.igot.plt       0x2000045c        0x0 load address 0x080042ac
+.igot.plt       0x2000045c        0x0 load address 0x0800432c
  .igot.plt      0x2000045c        0x0 d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
                 0x2000045c                . = ALIGN (0x4)
 
-.bss            0x2000045c    0x154b0 load address 0x080042ac
+.bss            0x2000045c    0x154b0 load address 0x0800432c
                 0x2000045c                _sbss = .
                 0x2000045c                __bss_start__ = _sbss
  *(.bss)
@@ -8482,7 +8481,7 @@ LOAD d:/programfiles/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-no
                 0x2001590c                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x2001590c      0x404 load address 0x080042ac
+                0x2001590c      0x404 load address 0x0800432c
                 0x20015910                . = ALIGN (0x8)
  *fill*         0x2001590c        0x4 
                 0x20015910                PROVIDE (end = .)
@@ -8699,23 +8698,23 @@ OUTPUT(STM32_Helloworld.elf elf32-littlearm)
  .debug_macro   0x00002881       0x4c src/main.o
  .debug_macro   0x000028cd      0x219 src/system_stm32f4xx.o
 
-.debug_line     0x00000000     0x8694
+.debug_line     0x00000000     0x869f
  .debug_line    0x00000000      0x83e StdPeriph_Driver/src/stm32f4xx_gpio.o
  .debug_line    0x0000083e      0xbbb StdPeriph_Driver/src/stm32f4xx_rcc.o
  .debug_line    0x000013f9      0x984 StdPeriph_Driver/src/stm32f4xx_usart.o
  .debug_line    0x00001d7d      0x6cb Third-party/FreeRTOS/org/Source/list.o
- .debug_line    0x00002448     0x137e Third-party/FreeRTOS/org/Source/tasks.o
- .debug_line    0x000037c6      0x801 Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
- .debug_line    0x00003fc7      0x7b1 Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.o
- .debug_line    0x00004778      0x5ec Third-party/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.o
- .debug_line    0x00004d64      0x75d Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o
- .debug_line    0x000054c1      0x7f6 Third-party/SEGGER/SEGGER/SEGGER_RTT.o
- .debug_line    0x00005cb7     0x16c9 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
- .debug_line    0x00007380      0xb4d src/main.o
- .debug_line    0x00007ecd      0x74b src/system_stm32f4xx.o
- .debug_line    0x00008618       0x7c startup/startup_stm32.o
+ .debug_line    0x00002448     0x1389 Third-party/FreeRTOS/org/Source/tasks.o
+ .debug_line    0x000037d1      0x801 Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
+ .debug_line    0x00003fd2      0x7b1 Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.o
+ .debug_line    0x00004783      0x5ec Third-party/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.o
+ .debug_line    0x00004d6f      0x75d Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o
+ .debug_line    0x000054cc      0x7f6 Third-party/SEGGER/SEGGER/SEGGER_RTT.o
+ .debug_line    0x00005cc2     0x16c9 Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+ .debug_line    0x0000738b      0xb4d src/main.o
+ .debug_line    0x00007ed8      0x74b src/system_stm32f4xx.o
+ .debug_line    0x00008623       0x7c startup/startup_stm32.o
 
-.debug_str      0x00000000    0x7e3c2
+.debug_str      0x00000000    0x7e3d8
  .debug_str     0x00000000    0x6cf16 StdPeriph_Driver/src/stm32f4xx_gpio.o
                               0x6d1fd (size before relaxing)
  .debug_str     0x0006cf16      0xe86 StdPeriph_Driver/src/stm32f4xx_rcc.o
@@ -8724,25 +8723,25 @@ OUTPUT(STM32_Helloworld.elf elf32-littlearm)
                               0x6d510 (size before relaxing)
  .debug_str     0x0006e2d6     0x9ae3 Third-party/FreeRTOS/org/Source/list.o
                                0xd814 (size before relaxing)
- .debug_str     0x00077db9     0x2371 Third-party/FreeRTOS/org/Source/tasks.o
-                               0xfbc7 (size before relaxing)
- .debug_str     0x0007a12a      0x7fb Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
+ .debug_str     0x00077db9     0x2387 Third-party/FreeRTOS/org/Source/tasks.o
+                               0xfbdd (size before relaxing)
+ .debug_str     0x0007a140      0x7fb Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o
                                0xb8dc (size before relaxing)
- .debug_str     0x0007a925      0x252 Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.o
+ .debug_str     0x0007a93b      0x252 Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.o
                                0xdf35 (size before relaxing)
- .debug_str     0x0007ab77      0x173 Third-party/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.o
+ .debug_str     0x0007ab8d      0x173 Third-party/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.o
                                0xa435 (size before relaxing)
- .debug_str     0x0007acea       0xfb Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o
+ .debug_str     0x0007ad00       0xfb Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o
                                0xdd35 (size before relaxing)
- .debug_str     0x0007ade5      0xdca Third-party/SEGGER/SEGGER/SEGGER_RTT.o
+ .debug_str     0x0007adfb      0xdca Third-party/SEGGER/SEGGER/SEGGER_RTT.o
                                0x6dc1 (size before relaxing)
- .debug_str     0x0007bbaf     0x12fc Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
+ .debug_str     0x0007bbc5     0x12fc Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o
                                0x8d67 (size before relaxing)
- .debug_str     0x0007ceab     0x13cc src/main.o
+ .debug_str     0x0007cec1     0x13cc src/main.o
                               0x7847b (size before relaxing)
- .debug_str     0x0007e277      0x122 src/system_stm32f4xx.o
+ .debug_str     0x0007e28d      0x122 src/system_stm32f4xx.o
                               0x6d15c (size before relaxing)
- .debug_str     0x0007e399       0x29 startup/startup_stm32.o
+ .debug_str     0x0007e3af       0x29 startup/startup_stm32.o
                                  0x60 (size before relaxing)
 
 .comment        0x00000000       0x7f
