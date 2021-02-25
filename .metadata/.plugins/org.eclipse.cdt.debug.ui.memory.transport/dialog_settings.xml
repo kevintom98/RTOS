@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="EXPORT_DIALOG">
+		<item value="0x20013690" key="Start"/>
+		<item value="0x2001568f" key="End"/>
+		<item value="D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\SEGGER_Mem_Dumps\001freertos_hw.SVdat" key="File"/>
+		<item value="rawbinary" key="SELECTED_EXPORTER"/>
+		<item value="0x20013690" key="Initial address"/>
+	</section>
+</section>
