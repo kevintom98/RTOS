@@ -1,84 +1,72 @@
-09:54:25 **** Incremental Build of configuration Debug for project STM32_Helloworld ****
+14:48:37 **** Build of configuration Debug for project STM32_Helloworld ****
 make -j8 all 
 Building file: ../src/main.c
-Building file: ../Third-party/SEGGER/SEGGER/SEGGER_RTT.c
-Building file: ../Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.c
 Building file: ../Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.c
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
 Building file: ../Third-party/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.c
 Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
 Building file: ../Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.c
-D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\Debug
-Invoking: MCU GCC Compiler
-D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -DSTM32F446xx -DUSE_STDPERIPH_DRIVER -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/StdPeriph_Driver/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/OS" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/SEGGER" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/include" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/device" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 Building file: ../Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.c
-D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\Debug
 Building file: ../Third-party/FreeRTOS/org/Source/croutine.c
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -DSTM32F446xx -DUSE_STDPERIPH_DRIVER -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/StdPeriph_Driver/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/OS" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/SEGGER" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/include" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/device" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-party/SEGGER/SEGGER/SEGGER_RTT.d" -MT"Third-party/SEGGER/SEGGER/SEGGER_RTT.o" -o "Third-party/SEGGER/SEGGER/SEGGER_RTT.o" "../Third-party/SEGGER/SEGGER/SEGGER_RTT.c"
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\Debug
+Building file: ../Third-party/FreeRTOS/org/Source/event_groups.c
+Building file: ../Third-party/FreeRTOS/org/Source/list.c
+Invoking: MCU GCC Compiler
 D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\Debug
 Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -DSTM32F446xx -DUSE_STDPERIPH_DRIVER -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/StdPeriph_Driver/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/OS" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/SEGGER" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/include" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/device" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.d" -MT"Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o" -o "Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.o" "../Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.c"
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -DSTM32F446xx -DUSE_STDPERIPH_DRIVER -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/StdPeriph_Driver/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/OS" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/SEGGER" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/include" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/device" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -DSTM32F446xx -DUSE_STDPERIPH_DRIVER -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/StdPeriph_Driver/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/OS" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/SEGGER" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/include" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/device" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.d" -MT"Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o" -o "Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o" "../Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.c"
+Invoking: MCU GCC Compiler
 Invoking: MCU GCC Compiler
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -DSTM32F446xx -DUSE_STDPERIPH_DRIVER -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/StdPeriph_Driver/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/OS" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/SEGGER" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/include" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/device" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-party/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.d" -MT"Third-party/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.o" -o "Third-party/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.o" "../Third-party/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.c"
 Invoking: MCU GCC Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -DSTM32F446xx -DUSE_STDPERIPH_DRIVER -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/StdPeriph_Driver/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/OS" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/SEGGER" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/include" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/device" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.d" -MT"Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o" -o "Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o" "../Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.c"
 D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\Debug
+D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -DSTM32F446xx -DUSE_STDPERIPH_DRIVER -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/StdPeriph_Driver/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/OS" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/SEGGER" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/include" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/device" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.d" -MT"Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.o" -o "Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.o" "../Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.c"
 D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\Debug
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -DSTM32F446xx -DUSE_STDPERIPH_DRIVER -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/StdPeriph_Driver/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/OS" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/SEGGER" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/include" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/device" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.d" -MT"Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o" -o "Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o" "../Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.c"
-D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\Debug
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -DSTM32F446xx -DUSE_STDPERIPH_DRIVER -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/StdPeriph_Driver/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/OS" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/SEGGER" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/include" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/device" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-party/FreeRTOS/org/Source/croutine.d" -MT"Third-party/FreeRTOS/org/Source/croutine.o" -o "Third-party/FreeRTOS/org/Source/croutine.o" "../Third-party/FreeRTOS/org/Source/croutine.c"
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -DSTM32F446xx -DUSE_STDPERIPH_DRIVER -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/StdPeriph_Driver/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/OS" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/SEGGER" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/include" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/device" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.d" -MT"Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.o" -o "Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.o" "../Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.c"
-Finished building: ../Third-party/SEGGER/SEGGER/SEGGER_SYSVIEW.c
-Finished building: ../Third-party/SEGGER/SEGGER/SEGGER_RTT.c
-Finished building: ../Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.c
+D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\Debug
+D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -DSTM32F446xx -DUSE_STDPERIPH_DRIVER -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/StdPeriph_Driver/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/OS" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/SEGGER" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/include" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/device" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-party/FreeRTOS/org/Source/event_groups.d" -MT"Third-party/FreeRTOS/org/Source/event_groups.o" -o "Third-party/FreeRTOS/org/Source/event_groups.o" "../Third-party/FreeRTOS/org/Source/event_groups.c"
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -DSTM32F446xx -DUSE_STDPERIPH_DRIVER -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/StdPeriph_Driver/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/OS" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/SEGGER" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/include" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/device" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-party/FreeRTOS/org/Source/list.d" -MT"Third-party/FreeRTOS/org/Source/list.o" -o "Third-party/FreeRTOS/org/Source/list.o" "../Third-party/FreeRTOS/org/Source/list.c"
 Finished building: ../Third-party/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.c
+Finished building: ../Third-party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.c
+Finished building: ../Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.c
 Finished building: ../Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.c
 Finished building: ../Third-party/FreeRTOS/org/Source/croutine.c
-Finished building: ../Third-party/FreeRTOS/org/Source/portable/MemMang/heap_4.c
+Finished building: ../Third-party/FreeRTOS/org/Source/event_groups.c
+ 
+Finished building: ../Third-party/FreeRTOS/org/Source/list.c
  
  
  
  
  
  
- 
-Building file: ../Third-party/FreeRTOS/org/Source/event_groups.c
-Building file: ../Third-party/FreeRTOS/org/Source/list.c
 Building file: ../Third-party/FreeRTOS/org/Source/queue.c
 Building file: ../Third-party/FreeRTOS/org/Source/stream_buffer.c
 Building file: ../Third-party/FreeRTOS/org/Source/tasks.c
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
 Building file: ../Third-party/FreeRTOS/org/Source/timers.c
+Finished building: ../src/main.c
 Invoking: MCU GCC Compiler
 Invoking: MCU GCC Compiler
-D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\Debug
-D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -DSTM32F446xx -DUSE_STDPERIPH_DRIVER -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/StdPeriph_Driver/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/OS" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/SEGGER" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/include" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/device" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-party/FreeRTOS/org/Source/list.d" -MT"Third-party/FreeRTOS/org/Source/list.o" -o "Third-party/FreeRTOS/org/Source/list.o" "../Third-party/FreeRTOS/org/Source/list.c"
-D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\Debug
 Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+ 
+D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\Debug
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -DSTM32F446xx -DUSE_STDPERIPH_DRIVER -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/StdPeriph_Driver/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/OS" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/SEGGER" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/include" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/device" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-party/FreeRTOS/org/Source/queue.d" -MT"Third-party/FreeRTOS/org/Source/queue.o" -o "Third-party/FreeRTOS/org/Source/queue.o" "../Third-party/FreeRTOS/org/Source/queue.c"
-D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -DSTM32F446xx -DUSE_STDPERIPH_DRIVER -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/StdPeriph_Driver/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/OS" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/SEGGER" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/include" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/device" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-party/FreeRTOS/org/Source/event_groups.d" -MT"Third-party/FreeRTOS/org/Source/event_groups.o" -o "Third-party/FreeRTOS/org/Source/event_groups.o" "../Third-party/FreeRTOS/org/Source/event_groups.c"
 D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\Debug
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -DSTM32F446xx -DUSE_STDPERIPH_DRIVER -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/StdPeriph_Driver/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/OS" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/SEGGER" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/include" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/device" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-party/FreeRTOS/org/Source/stream_buffer.d" -MT"Third-party/FreeRTOS/org/Source/stream_buffer.o" -o "Third-party/FreeRTOS/org/Source/stream_buffer.o" "../Third-party/FreeRTOS/org/Source/stream_buffer.c"
 D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\Debug
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -DSTM32F446xx -DUSE_STDPERIPH_DRIVER -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/StdPeriph_Driver/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/OS" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/SEGGER" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/include" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/device" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-party/FreeRTOS/org/Source/tasks.d" -MT"Third-party/FreeRTOS/org/Source/tasks.o" -o "Third-party/FreeRTOS/org/Source/tasks.o" "../Third-party/FreeRTOS/org/Source/tasks.c"
+D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\Debug
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -DSTM32F446xx -DUSE_STDPERIPH_DRIVER -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/StdPeriph_Driver/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/OS" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/SEGGER/SEGGER" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/include" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/device" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Helloworld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-party/FreeRTOS/org/Source/timers.d" -MT"Third-party/FreeRTOS/org/Source/timers.o" -o "Third-party/FreeRTOS/org/Source/timers.o" "../Third-party/FreeRTOS/org/Source/timers.c"
-Finished building: ../src/main.c
- 
-Finished building: ../Third-party/FreeRTOS/org/Source/list.c
- 
-Finished building: ../Third-party/FreeRTOS/org/Source/event_groups.c
- 
 Finished building: ../Third-party/FreeRTOS/org/Source/timers.c
-Finished building: ../Third-party/FreeRTOS/org/Source/stream_buffer.c
  
+Finished building: ../Third-party/FreeRTOS/org/Source/stream_buffer.c
  
 Finished building: ../Third-party/FreeRTOS/org/Source/queue.c
  
@@ -94,120 +82,10 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "STM32_Helloworld.elf" "STM32_Helloworld.bin"
 arm-none-eabi-size "STM32_Helloworld.elf"
    text	   data	    bss	    dec	    hex	filename
-  21920	   1128	  88364	 111412	  1b334	STM32_Helloworld.elf
+  15624	   1128	  88244	 104996	  19a24	STM32_Helloworld.elf
  
-09:56:22 **** Erasing chip ... ****
-"D:\\ProgramFiles\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.23.0.201904120827\\tools\\openocd\\bin\\openocd.exe" -f stm32.flash.3254257601781004801.cfg -s "D:\\EmbeddedCodes\\RTOS_Workspace\\STM32_Helloworld" -s "D:\\ProgramFiles\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_2.5.0.201904120827\\resources\\openocd\\st_scripts" "-c init" "-c reset halt" "-c flash erase_sector 0 0 last" "-c exit" 
-Open On-Chip Debugger 0.10.0+dev-00021-g524e8c8 (2019-04-12-08:48)
-Licensed under GNU GPL v2
-For bug reports, read
-	http://openocd.org/doc/doxygen/bugs.html
-srst_only separate srst_nogate srst_open_drain connect_assert_srst
-Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
-adapter speed: 8000 kHz
-adapter_nsrst_delay: 100
-Info : clock speed 8000 kHz
-Info : STLINK v2.1 JTAG v37 API v2 M27 VID 0x0483 PID 0x374B
-Info : using stlink api v2
-Info : Target voltage: 3.250493
-Info : Unable to match requested speed 8000 kHz, using 4000 kHz
-Info : Stlink adapter speed set to 4000 kHz
-Info : STM32F446RETx.cpu: hardware has 6 breakpoints, 4 watchpoints
-Info : Listening on port 3333 for gdb connections
-target halted due to debug-request, current mode: Thread 
-xPSR: 0x01000000 pc: 0x0800371c msp: 0x20020000
-Info : device id = 0x10006421
-Info : flash size = 512kbytes
-erased sectors 0 through 7 on flash bank 0 in 8.306746s
-09:56:41 **** Programming project STM32_Helloworld on chip ****
-"D:\\ProgramFiles\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.23.0.201904120827\\tools\\openocd\\bin\\openocd.exe" -f stm32.flash.2495592169648165783.cfg -s "D:\\EmbeddedCodes\\RTOS_Workspace\\STM32_Helloworld" -s "D:\\ProgramFiles\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_2.5.0.201904120827\\resources\\openocd\\st_scripts" -c "program Debug/STM32_Helloworld.elf verify reset " -c shutdown 
-Open On-Chip Debugger 0.10.0+dev-00021-g524e8c8 (2019-04-12-08:48)
-Licensed under GNU GPL v2
-For bug reports, read
-	http://openocd.org/doc/doxygen/bugs.html
-srst_only separate srst_nogate srst_open_drain connect_assert_srst
-Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
-adapter speed: 8000 kHz
-adapter_nsrst_delay: 100
-Info : clock speed 8000 kHz
-Info : STLINK v2.1 JTAG v37 API v2 M27 VID 0x0483 PID 0x374B
-Info : using stlink api v2
-Info : Target voltage: 3.255227
-Info : Unable to match requested speed 8000 kHz, using 4000 kHz
-Info : Stlink adapter speed set to 4000 kHz
-Info : STM32F446RETx.cpu: hardware has 6 breakpoints, 4 watchpoints
-Info : Listening on port 3333 for gdb connections
-target halted due to debug-request, current mode: Thread 
-xPSR: 0x01000000 pc: 0xfffffffe msp: 0xfffffffc
-configuring PLL
-Info : Unable to match requested speed 8000 kHz, using 4000 kHz
-Info : Stlink adapter speed set to 4000 kHz
-Info : Unable to match requested speed 8000 kHz, using 4000 kHz
-adapter speed: 4000 kHz
-** Programming Started **
-auto erase enabled
-Info : device id = 0x10006421
-Info : flash size = 512kbytes
-target halted due to breakpoint, current mode: Thread 
-xPSR: 0x61000000 pc: 0x20000046 msp: 0xfffffffc
-wrote 32768 bytes from file Debug/STM32_Helloworld.elf in 1.105630s (28.943 KiB/s)
-** Programming Finished **
-** Verify Started **
-target halted due to breakpoint, current mode: Thread 
-xPSR: 0x61000000 pc: 0x2000002e msp: 0xfffffffc
-target halted due to breakpoint, current mode: Thread 
-xPSR: 0x61000000 pc: 0x2000002e msp: 0xfffffffc
-verified 23108 bytes in 0.243056s (92.844 KiB/s)
-** Verified OK **
-** Resetting Target **
-shutdown command invoked
-09:57:03 **** Incremental Build of configuration Debug for project STM32_Helloworld ****
-make -j8 all 
-make: Nothing to be done for 'all'.
-10:19:19 **** Programming project STM32_Helloworld on chip ****
-"D:\\ProgramFiles\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.23.0.201904120827\\tools\\openocd\\bin\\openocd.exe" -f stm32.flash.3588724712471393334.cfg -s "D:\\EmbeddedCodes\\RTOS_Workspace\\STM32_Helloworld" -s "D:\\ProgramFiles\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_2.5.0.201904120827\\resources\\openocd\\st_scripts" -c "program Debug/STM32_Helloworld.elf verify reset " -c shutdown 
-Open On-Chip Debugger 0.10.0+dev-00021-g524e8c8 (2019-04-12-08:48)
-Licensed under GNU GPL v2
-For bug reports, read
-	http://openocd.org/doc/doxygen/bugs.html
-srst_only separate srst_nogate srst_open_drain connect_assert_srst
-Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
-adapter speed: 8000 kHz
-adapter_nsrst_delay: 100
-Info : clock speed 8000 kHz
-Info : STLINK v2.1 JTAG v37 API v2 M27 VID 0x0483 PID 0x374B
-Info : using stlink api v2
-Info : Target voltage: 3.248915
-Info : Unable to match requested speed 8000 kHz, using 4000 kHz
-Info : Stlink adapter speed set to 4000 kHz
-Info : STM32F446RETx.cpu: hardware has 6 breakpoints, 4 watchpoints
-Info : Listening on port 3333 for gdb connections
-target halted due to debug-request, current mode: Thread 
-xPSR: 0x01000000 pc: 0x0800538c msp: 0x20020000
-configuring PLL
-Info : Unable to match requested speed 8000 kHz, using 4000 kHz
-Info : Stlink adapter speed set to 4000 kHz
-Info : Unable to match requested speed 8000 kHz, using 4000 kHz
-adapter speed: 4000 kHz
-** Programming Started **
-auto erase enabled
-Info : device id = 0x10006421
-Info : flash size = 512kbytes
-target halted due to breakpoint, current mode: Thread 
-xPSR: 0x61000000 pc: 0x20000046 msp: 0x20020000
-wrote 32768 bytes from file Debug/STM32_Helloworld.elf in 1.053950s (30.362 KiB/s)
-** Programming Finished **
-** Verify Started **
-target halted due to breakpoint, current mode: Thread 
-xPSR: 0x61000000 pc: 0x2000002e msp: 0x20020000
-target halted due to breakpoint, current mode: Thread 
-xPSR: 0x61000000 pc: 0x2000002e msp: 0x20020000
-verified 23108 bytes in 0.237080s (95.185 KiB/s)
-** Verified OK **
-** Resetting Target **
-shutdown command invoked
-10:19:49 **** Programming project STM32_Helloworld on chip ****
-"D:\\ProgramFiles\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.23.0.201904120827\\tools\\openocd\\bin\\openocd.exe" -f stm32.flash.3764370936633044145.cfg -s "D:\\EmbeddedCodes\\RTOS_Workspace\\STM32_Helloworld" -s "D:\\ProgramFiles\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_2.5.0.201904120827\\resources\\openocd\\st_scripts" -c "program Debug/STM32_Helloworld.elf verify reset " -c shutdown 
+14:48:52 **** Programming project STM32_Helloworld on chip ****
+"D:\\ProgramFiles\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.23.0.201904120827\\tools\\openocd\\bin\\openocd.exe" -f stm32.flash.653457159017456606.cfg -s "D:\\EmbeddedCodes\\RTOS_Workspace\\STM32_Helloworld" -s "D:\\ProgramFiles\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_2.5.0.201904120827\\resources\\openocd\\st_scripts" -c "program Debug/STM32_Helloworld.elf verify reset " -c shutdown 
 Open On-Chip Debugger 0.10.0+dev-00021-g524e8c8 (2019-04-12-08:48)
 Licensed under GNU GPL v2
 For bug reports, read
@@ -237,14 +115,20 @@ Info : device id = 0x10006421
 Info : flash size = 512kbytes
 target halted due to breakpoint, current mode: Thread 
 xPSR: 0x61000000 pc: 0x20000046 msp: 0x20020000
-wrote 32768 bytes from file Debug/STM32_Helloworld.elf in 1.073095s (29.820 KiB/s)
+wrote 32768 bytes from file Debug/STM32_Helloworld.elf in 1.011770s (31.628 KiB/s)
 ** Programming Finished **
 ** Verify Started **
 target halted due to breakpoint, current mode: Thread 
 xPSR: 0x61000000 pc: 0x2000002e msp: 0x20020000
 target halted due to breakpoint, current mode: Thread 
 xPSR: 0x61000000 pc: 0x2000002e msp: 0x20020000
-verified 23108 bytes in 0.242359s (93.111 KiB/s)
+verified 16812 bytes in 0.217414s (75.515 KiB/s)
 ** Verified OK **
 ** Resetting Target **
 shutdown command invoked
+14:49:36 **** Incremental Build of configuration Debug for project STM32_Helloworld ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+14:50:09 **** Incremental Build of configuration Debug for project STM32_Helloworld ****
+make -j8 all 
+make: Nothing to be done for 'all'.
