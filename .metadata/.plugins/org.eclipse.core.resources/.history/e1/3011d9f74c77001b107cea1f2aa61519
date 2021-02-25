@@ -128,9 +128,7 @@ void vTask1_handler(void *params)
 			UART_ACCESS_KEY = NOT_AVAILABLE;
 			printmsg("Hello world from task-1\r\n");
 			UART_ACCESS_KEY = AVAILABLE;
-			SEGGER_SYSVIEW_Print("Task-1 is yielding");
-			traceISR_EXIT_TO_SCHEDULER(); //Used for displaying PendSV black line in SEGGER
-			taskYIELD();   //Manual switching
+			taskYIELD();
 		}
 	}
 }
@@ -144,9 +142,7 @@ void vTask2_handler(void *params)
 			UART_ACCESS_KEY = NOT_AVAILABLE;
 			printmsg("Hello world from task-2\r\n");
 			UART_ACCESS_KEY = AVAILABLE;
-			SEGGER_SYSVIEW_Print("Task-2 is yielding");
-			traceISR_EXIT_TO_SCHEDULER();  //Used for displaying PendSV black line in SEGGER
-			taskYIELD(); //Manual switching
+			taskYIELD();
 		}
 	}
 }
