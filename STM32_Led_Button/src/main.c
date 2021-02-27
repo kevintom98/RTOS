@@ -1,12 +1,3 @@
-/**
-  ******************************************************************************
-  * @file    main.c
-  * @author  Ac6
-  * @version V1.0
-  * @date    01-December-2013
-  * @brief   Default main function.
-  ******************************************************************************
-*/
 /*
  * Author: Kevin Tom (https://sites.google.com/view/kevintom)
  *
@@ -76,6 +67,9 @@ int main(void)
 
 	prvSetupHardware();
 
+	SEGGER_SYSVIEW_Conf();
+	SEGGER_SYSVIEW_Start();
+
 	//3. Creating LED task
 	xTaskCreate (led_task_handler,"LED-TASK",configMINIMAL_STACK_SIZE,NULL,1,NULL);
 	xTaskCreate (button_task_handler,"BUTTON-TASK",configMINIMAL_STACK_SIZE,NULL,1,NULL);
@@ -85,6 +79,7 @@ int main(void)
 	vTaskStartScheduler();
 
 	for(;;);
+
 }
 
 
@@ -202,7 +197,7 @@ void prvSetupGPIO(void)
 
 	button_init.GPIO_Mode = GPIO_Mode_IN;
 	button_init.GPIO_OType = GPIO_OType_PP; //Not applicable so, even if it is PushPull there are no issues
-	button_init.GPIO_Pin = GPIO_Pin_13; //Button is connected to PC13
+	button_init.GPIO_Pin = GPIO_Pin_13;     //Button is connected to PC13
 	button_init.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	button_init.GPIO_Speed = GPIO_Low_Speed;
 	GPIO_Init(GPIOC, &button_init);

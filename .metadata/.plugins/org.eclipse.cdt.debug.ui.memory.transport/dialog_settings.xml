@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="EXPORT_DIALOG">
-		<item value="0x20013654" key="Start"/>
-		<item value="0x20015653" key="End"/>
-		<item value="D:\EmbeddedCodes\RTOS_Workspace\STM32_Helloworld\SEGGER_Mem_Dumps\004freertos_hw.SVdat" key="File"/>
+		<item value="0x2001364c" key="Start"/>
+		<item value="0x20015649" key="End"/>
+		<item value="D:\EmbeddedCodes\RTOS_Workspace\STM32_Led_Button\SEGGER_Mem_Dumps\001freertos_lb.SVdat" key="File"/>
 		<item value="rawbinary" key="SELECTED_EXPORTER"/>
-		<item value="0x20013654" key="Initial address"/>
+		<item value="0x2001364c" key="Initial address"/>
 	</section>
 </section>

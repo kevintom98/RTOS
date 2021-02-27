@@ -8,11 +8,6 @@
  *
  * Description
  * ```````````
- * The code is basic "Hello World" application using built on FreeRTOS,
- * developed for learning task creation, scheduling, etc.
- *
- * SEMI-HOSTING is enabled for testing the code.
- * UART is configured for observing the output on COM port.
  *
  * UART Details
  * ````````````
@@ -25,6 +20,7 @@
  *
  */
 
+
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
@@ -33,48 +29,30 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
-TaskHandle_t xTaskHandle1=NULL;
-TaskHandle_t xTaskHandle2=NULL;
-
-
-//Task function prototype
-void vTask1_handler(void *params);
-void vTask2_handler(void *params);
-
-
-#ifdef USE_SEMIHOSTING
-//Used for hosting
-extern void initialise_monitor_handles();
-#endif
-
-static void prvSetupHardware(void);
-static void prvSetupUART(void);
-
-
-void printmsg(char *msg);
-
-
-
-//Macros section
 
 #define TRUE 1
 #define FALSE 0
 
-#define AVAILABLE TRUE
-#define NOT_AVAILABLE FALSE
+#define NOT_PRESSED FALSE
+#define PRESSED TRUE
 
-//Global variable section
-char usr_msg[200]={0};
-uint8_t UART_ACCESS_KEY = AVAILABLE;
+
+//Function prototypes
+static void prvSetupHardware(void);
+void printmsg(char *msg);
+static void prvSetupUART(void);
+void prvSetupGPIO(void);
+//Task prototypes
+void button_task_handler(void *params);
+void led_task_handler(void *params);
+
+//Global variable
+uint8_t button_status_flag = NOT_PRESSED;
+
+
 
 int main(void)
 {
-
-#ifdef USE_SEMIHOSTING
-	initialise_monitor_handles();
-	printf("Hello world from main \n");
-#endif
-
 	//For enabling cycle counter(SEGGER)
 	DWT->CTRL |= (1<<0);
 
@@ -89,59 +67,75 @@ int main(void)
 
 	prvSetupHardware();
 
-	sprintf(usr_msg,"This is hello world application starting\r\n");
-	printmsg(usr_msg);
-
-	//Start recording for SEGGER
 	SEGGER_SYSVIEW_Conf();
 	SEGGER_SYSVIEW_Start();
 
-	//3. Creating two tasks
-	xTaskCreate(vTask1_handler,"Task-1",configMINIMAL_STACK_SIZE,NULL,2,&xTaskHandle1 );
-	xTaskCreate(vTask2_handler,"Task-2",configMINIMAL_STACK_SIZE,NULL,2,&xTaskHandle2 );
+	//3. Creating LED task
+	xTaskCreate (led_task_handler,"LED-TASK",configMINIMAL_STACK_SIZE,NULL,1,NULL);
+	xTaskCreate (button_task_handler,"BUTTON-TASK",configMINIMAL_STACK_SIZE,NULL,1,NULL);
 
-	//4. Start the scheduler
+
+	//4. Start Scheduling
 	vTaskStartScheduler();
 
-
 	for(;;);
+
 }
 
 
-
-
-void vTask1_handler(void *params)
+void led_task_handler(void *params)
 {
 	while(1)
 	{
-		if(UART_ACCESS_KEY == AVAILABLE)
+		if(button_status_flag == PRESSED)
 		{
-			UART_ACCESS_KEY = NOT_AVAILABLE;
-			printmsg("Hello world from task-1\r\n");
-			UART_ACCESS_KEY = AVAILABLE;
-			SEGGER_SYSVIEW_Print("Task-1 is yielding");
-			traceISR_EXIT_TO_SCHEDULER(); //Used for displaying PendSV black line in SEGGER
-			taskYIELD();   //Manual switching
+			//Turn ON
+			GPIO_WriteBit(GPIOA, GPIO_Pin_5,Bit_SET);
+
+		}
+		else
+		{
+			//Turn OFF
+			GPIO_WriteBit(GPIOA, GPIO_Pin_5,Bit_RESET);
 		}
 	}
 }
 
-void vTask2_handler(void *params)
+
+void button_task_handler(void *params)
 {
 	while(1)
 	{
-		if(UART_ACCESS_KEY == AVAILABLE)
+		if(GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13))
 		{
-			UART_ACCESS_KEY = NOT_AVAILABLE;
-			printmsg("Hello world from task-2\r\n");
-			UART_ACCESS_KEY = AVAILABLE;
-			SEGGER_SYSVIEW_Print("Task-2 is yielding");
-			traceISR_EXIT_TO_SCHEDULER();  //Used for displaying PendSV black line in SEGGER
-			taskYIELD(); //Manual switching
+			//Button is pressed
+			button_status_flag = NOT_PRESSED;
+		}
+		else
+		{
+			//Button is not pressed
+			button_status_flag = PRESSED;
 		}
 	}
 }
 
+
+static void prvSetupHardware(void)
+{
+ //Setup UART
+	prvSetupUART();
+	prvSetupGPIO();
+
+}
+
+void printmsg(char *msg)
+{
+	for(uint32_t i=0; i<strlen(msg); i++)
+	{
+		while (USART_GetFlagStatus(USART2, USART_FLAG_TXE) != SET);
+		USART_SendData(USART2, msg[i]);
+	}
+}
 
 static void prvSetupUART(void)
 {
@@ -184,17 +178,29 @@ static void prvSetupUART(void)
 
 }
 
-static void prvSetupHardware(void)
+
+void prvSetupGPIO(void)
 {
- //Setup UART
-	prvSetupUART();
+	//Please note that this function is board specific
+
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
+
+
+	GPIO_InitTypeDef led_init, button_init;
+	led_init.GPIO_Mode = GPIO_Mode_OUT;
+	led_init.GPIO_OType = GPIO_OType_PP;
+	led_init.GPIO_Pin = GPIO_Pin_5;  //LED is connected to PA5
+	led_init.GPIO_PuPd = GPIO_PuPd_NOPULL;
+	led_init.GPIO_Speed = GPIO_Low_Speed;
+	GPIO_Init(GPIOA, &led_init);
+
+	button_init.GPIO_Mode = GPIO_Mode_IN;
+	button_init.GPIO_OType = GPIO_OType_PP; //Not applicable so, even if it is PushPull there are no issues
+	button_init.GPIO_Pin = GPIO_Pin_13; //Button is connected to PC13
+	button_init.GPIO_PuPd = GPIO_PuPd_NOPULL;
+	button_init.GPIO_Speed = GPIO_Low_Speed;
+	GPIO_Init(GPIOC, &button_init);
+
 }
 
-void printmsg(char *msg)
-{
-	for(uint32_t i=0; i<strlen(msg); i++)
-	{
-		while (USART_GetFlagStatus(USART2, USART_FLAG_TXE) != SET);
-		USART_SendData(USART2, msg[i]);
-	}
-}
