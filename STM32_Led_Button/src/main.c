@@ -8,6 +8,8 @@
  *
  * Description
  * ```````````
+ * This program will switch on-board LED when the user switch is pressed.
+ * Uses flags to switch between tasks and preemption is enabled.
  *
  * UART Details
  * ````````````
