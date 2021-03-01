@@ -1,0 +1,23 @@
+17:28:43 **** Incremental Build of configuration Debug for project STM32_Led_Button_Up ****
+make -j8 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+D:\EmbeddedCodes\RTOS_Workspace\STM32_Led_Button_Up\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -DSTM32F446xx -DUSE_STDPERIPH_DRIVER -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Led_Button_Up/StdPeriph_Driver/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Led_Button_Up/Third-party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Led_Button_Up/Third-party/FreeRTOS/org/Source/include" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Led_Button_Up/Third-party/SEGGER/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Led_Button_Up/Third-party/SEGGER/OS" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Led_Button_Up/Third-party/SEGGER/SEGGER" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Led_Button_Up/Config" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Led_Button_Up/inc" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Led_Button_Up/CMSIS/device" -I"D:/EmbeddedCodes/RTOS_Workspace/STM32_Led_Button_Up/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: STM32_Led_Button_Up.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"D:/EmbeddedCodes/RTOS_Workspace/STM32_Led_Button_Up/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "STM32_Led_Button_Up.elf" @"objects.list"   -lm
+Finished building target: STM32_Led_Button_Up.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "STM32_Led_Button_Up.elf" "STM32_Led_Button_Up.bin"
+arm-none-eabi-size "STM32_Led_Button_Up.elf"
+   text	   data	    bss	    dec	    hex	filename
+  15968	   1120	  88036	 105124	  19aa4	STM32_Led_Button_Up.elf
+ 
+
+17:28:45 Build Finished (took 2s.277ms)
+

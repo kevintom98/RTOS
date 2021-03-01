@@ -1091,3 +1091,9 @@ Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING
 
 !ENTRY fr.ac6.mcu.ide 1 1 2021-03-01 10:45:09.982
 !MESSAGE Started RMI Server, listening on port 21112
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-03-01 15:51:02.904
+!MESSAGE Indexed 'STM32_Led_Button_Up' (1 sources, 34 headers) in 0.87 sec: 1,090 declarations; 1,719 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-03-01 15:52:21.108
+!MESSAGE Indexed 'STM32_Led_Button_Up' (46 sources, 98 headers) in 3.44 sec: 8,654 declarations; 33,698 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
