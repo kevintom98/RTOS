@@ -8,9 +8,8 @@
  *
  * Description
  * ```````````
- * This program will toggle on-board LED when the user switch is pressed.
+ * This program will switch on-board LED when the user switch is pressed.
  * Uses flags to switch between tasks and preemption is enabled.
- * A single task and interrupt is used in the program.
  *
  * UART Details
  * ````````````
