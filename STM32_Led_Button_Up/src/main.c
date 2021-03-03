@@ -64,11 +64,9 @@ int main(void)
 	//For enabling cycle counter(SEGGER)
 	DWT->CTRL |= (1<<0);
 
-
 	//1. DeIntialzing the 180MHz clock to default(disabling the PLL), because we do not need such high speed.
 	//HSI ON, PLL OFF,HSE OFF, system clock=16Mhz, cpu_clock = 16Mhz
 	RCC_DeInit();
-
 
 	//2.Update the SystemCoreClock variable
 	SystemCoreClockUpdate();
@@ -80,8 +78,6 @@ int main(void)
 
 	//3. Creating LED task
 	xTaskCreate (led_task_handler,"LED-TASK",configMINIMAL_STACK_SIZE,NULL,1,NULL);
-
-
 
 	//4. Start Scheduling
 	vTaskStartScheduler();
