@@ -1,30 +1,12 @@
-/*
- * Author: Kevin Tom (https://sites.google.com/view/kevintom)
- *
- * Microcontroller : STM32F446RE-NUCLEO
- * 					 ARM CORTEX M4 core at 180 MHz
- * 					 512 Kb Flash
- * 					 128 Kb SRAM
- *
- * Description
- * ```````````
- * This program will toggle on-board LED when the user switch is pressed.
- * Uses TaskNotification API to preempt tasks.
- *
- * UART Details
- * ````````````
- * Used				 : 	USART2
- * Pins				 :	PA2 (TX)
- * 		 				PA3 (RX)
- * Baudrate 		 : 	115200
- * No. Of Stop Bits  : 	1
- *
- * GPIO
- * ````
- * Used 			 : GPIOA, GPIOC
- * Pins 			 : PA5, PC13
- *
- */
+/**
+  ******************************************************************************
+  * @file    main.c
+  * @author  Ac6
+  * @version V1.0
+  * @date    01-December-2013
+  * @brief   Default main function.
+  ******************************************************************************
+*/
 
 
 #include <stdio.h>
@@ -97,6 +79,7 @@ void vtask_led_handler(void *params)
 			sprintf(usr_msg, "Notification received \r\n");
 			printmsg(usr_msg);
 		}
+
 	}
 }
 
@@ -107,7 +90,7 @@ void vtask_button_handler(void *params)
 		if(!GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_13))
 		{
 			//Button is pressed
-			//Delay for button de-bouncing 100ms
+			//Delay for button debouncing 100ms
 			rtos_delay(100);
 
 			//Send notification to LED task
@@ -225,7 +208,7 @@ void prvSetupGPIO(void)
 void  rtos_delay(uint32_t delay_in_ms)
 {
 	uint32_t current_tick = xTaskGetTickCount();
-	//Converting milli-second delay to ticks
+	//Converting mili-second delay to ticks
 	uint32_t delay_in_ticks = (delay_in_ms * configTICK_RATE_HZ)/1000;
 
 	while(xTaskGetTickCount() < (current_tick + delay_in_ticks));
