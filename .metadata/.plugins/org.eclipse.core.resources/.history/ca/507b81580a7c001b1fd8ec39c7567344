@@ -27,17 +27,14 @@
  */
 
 
-
-//Header files
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
 
+
 #include "stm32f4xx.h"
 #include "FreeRTOS.h"
 #include "task.h"
-
-
 
 
 TaskHandle_t xTaskHandle1=NULL;
@@ -56,20 +53,17 @@ void  rtos_delay(uint32_t delay_in_ms);
 char usr_msg[200]={0};
 
 
-
-
-
-
 int main(void)
 {
+
 	//For enabling cycle counter(SEGGER)
 	DWT->CTRL |= (1<<0);
 
-	//DeIntialzing the 180MHz clock to default(disabling the PLL), because we do not need such high speed.
+	//1. DeIntialzing the 180MHz clock to default(disabling the PLL), because we do not need such high speed.
 	//HSI ON, PLL OFF,HSE OFF, system clock=16Mhz, cpu_clock = 16Mhz
 	RCC_DeInit();
 
-	//Update the SystemCoreClock variable
+	//2.Update the SystemCoreClock variable
 	SystemCoreClockUpdate();
 
 	prvSetupHardware();
@@ -80,23 +74,16 @@ int main(void)
 	SEGGER_SYSVIEW_Conf();
 	SEGGER_SYSVIEW_Start();
 
-	xTaskCreate(vtask_led_handler,"LED-Task",500,NULL,2,&xTaskHandle1 ); //500 is given as stack memory as we are using APIs, we need more memory
+	xTaskCreate(vtask_led_handler,"LED-Task",500,NULL,2,&xTaskHandle1 ); //500 is given as stack memory as we are using APIs
 	xTaskCreate(vtask_button_handler,"Button-Task",500,NULL,2,&xTaskHandle2 );
 
-	//Start the scheduler
+
+	//4. Start the scheduler
 	vTaskStartScheduler();
 
 	for(;;);
 
-
-
-
-
 }
-
-
-
-
 
 void vtask_led_handler(void *params)
 {
@@ -133,7 +120,7 @@ void vtask_button_handler(void *params)
 
 static void prvSetupHardware(void)
 {
-	//Setup UART
+ //Setup UART
 	prvSetupUART();
 	prvSetupGPIO();
 }
@@ -149,19 +136,17 @@ void printmsg(char *msg)
 }
 
 
-
-
 static void prvSetupUART(void)
 {
 
 	GPIO_InitTypeDef gpio_uart_pins;
 	USART_InitTypeDef uart2_init;
 
-	//1. Enable UART2 and GPIOA (Because COM port uses UART2 of Nucleo board) peripheral port
+	//1. Enable UART2 and GPIOA (Because COM port uses UART2 of nucleo board) peripheral port
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
 
-	//PA2 is USART2_TX and PA3 is USART2_RX(from data-sheet(alternate pin section of data-sheet))
+	//PA2 is USART2_TX and PA3 is USART2_RX(from datasheet(alternate pin section of datasheet))
 
 	//2. Alternate function enabling on PA2 and PA3
 	//Setting each and every member of the structure
@@ -174,6 +159,7 @@ static void prvSetupUART(void)
 	//3.AF Mode setting for pins
 	GPIO_PinAFConfig(GPIOA, GPIO_PinSource2, GPIO_AF_USART2); //PA2
 	GPIO_PinAFConfig(GPIOA, GPIO_PinSource3, GPIO_AF_USART2); //PA3
+
 
 	//4. Parameter initialization of UART
 	memset(&uart2_init,0,sizeof(uart2_init));
@@ -192,11 +178,10 @@ static void prvSetupUART(void)
 }
 
 
-
-
 void prvSetupGPIO(void)
 {
 	//Please note that this function is board specific
+
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE); //For enable interrupt(SYSCFG)
@@ -233,17 +218,15 @@ void prvSetupGPIO(void)
 	//NVIC Settings(IRQ Setting EXTI line is coming and hitting NVIC, so we should choose the IRQ number)
 	//All interrupts from pin 10-15 has a single IRQ number (Position=40)
 
-	NVIC_SetPriority(EXTI15_10_IRQn,5);
+	NVIC_SetPriority(EXTI15_10_IRQn, 5);
 	NVIC_EnableIRQ(EXTI15_10_IRQn);
 }
-
-
-
 
 void  rtos_delay(uint32_t delay_in_ms)
 {
 	uint32_t current_tick = xTaskGetTickCount();
 	//Converting milli-second delay to ticks
 	uint32_t delay_in_ticks = (delay_in_ms * configTICK_RATE_HZ)/1000;
+
 	while(xTaskGetTickCount() < (current_tick + delay_in_ticks));
 }

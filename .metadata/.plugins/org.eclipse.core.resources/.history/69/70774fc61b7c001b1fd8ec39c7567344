@@ -33,11 +33,11 @@
 #include <stdint.h>
 #include <string.h>
 
+
+
 #include "stm32f4xx.h"
 #include "FreeRTOS.h"
 #include "task.h"
-
-
 
 
 TaskHandle_t xTaskHandle1=NULL;
@@ -62,6 +62,7 @@ char usr_msg[200]={0};
 
 int main(void)
 {
+
 	//For enabling cycle counter(SEGGER)
 	DWT->CTRL |= (1<<0);
 
@@ -80,13 +81,14 @@ int main(void)
 	SEGGER_SYSVIEW_Conf();
 	SEGGER_SYSVIEW_Start();
 
-	xTaskCreate(vtask_led_handler,"LED-Task",500,NULL,2,&xTaskHandle1 ); //500 is given as stack memory as we are using APIs, we need more memory
+	xTaskCreate(vtask_led_handler,"LED-Task",500,NULL,2,&xTaskHandle1 ); //500 is given as stack memory as we are using APIs
 	xTaskCreate(vtask_button_handler,"Button-Task",500,NULL,2,&xTaskHandle2 );
 
 	//Start the scheduler
 	vTaskStartScheduler();
 
 	for(;;);
+
 
 
 

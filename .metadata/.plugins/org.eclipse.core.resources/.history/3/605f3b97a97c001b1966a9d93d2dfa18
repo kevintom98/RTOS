@@ -80,15 +80,13 @@ int main(void)
 	SEGGER_SYSVIEW_Conf();
 	SEGGER_SYSVIEW_Start();
 
-	xTaskCreate(vtask_led_handler,"LED-Task",500,NULL,2,&xTaskHandle1 ); //500 is given as stack memory as we are using APIs, we need more memory
+	xTaskCreate(vtask_led_handler,"LED-Task",500,NULL,2,&xTaskHandle1 ); //500 is given as stack memory as we are using APIs
 	xTaskCreate(vtask_button_handler,"Button-Task",500,NULL,2,&xTaskHandle2 );
 
 	//Start the scheduler
 	vTaskStartScheduler();
 
 	for(;;);
-
-
 
 
 
