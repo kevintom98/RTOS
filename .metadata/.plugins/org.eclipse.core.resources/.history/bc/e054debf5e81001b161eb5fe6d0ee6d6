@@ -211,8 +211,25 @@ void prvSetupGPIO(void)
 	button_init.GPIO_Speed = GPIO_Low_Speed;
 	GPIO_Init(GPIOC, &button_init);
 
-}
+	//Interrupt configuration (Button is connected to PC13)
+	//Enabling External Interrupt (Port C pin 13 so EXTI13 we have to configure)
+	//SYSCFG Setting
+	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOC, EXTI_PinSource13);
 
+	//EXTI Line configuration
+	EXTI_InitTypeDef exti_init;
+	exti_init.EXTI_Line = EXTI_Line13;
+	exti_init.EXTI_Mode = EXTI_Mode_Interrupt;
+	exti_init.EXTI_Trigger = EXTI_Trigger_Falling;
+	exti_init.EXTI_LineCmd = ENABLE;  // Enabling the interrupt line
+	EXTI_Init(&exti_init);
+
+	//NVIC Settings(IRQ Setting EXTI line is coming and hitting NVIC, so we should choose the IRQ number)
+	//All interrupts from pin 10-15 has a single IRQ number (Position=40)
+
+	NVIC_SetPriority(EXTI15_10_IRQn,5);
+	NVIC_EnableIRQ(EXTI15_10_IRQn);
+}
 
 
 
