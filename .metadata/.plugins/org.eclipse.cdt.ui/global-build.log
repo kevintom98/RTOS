@@ -1,4 +1,4 @@
-10:39:13 **** Incremental Build of configuration Debug for project STM32_Task_Notify ****
+10:59:22 **** Incremental Build of configuration Debug for project STM32_Task_Notify ****
 make -j8 all 
 Building file: ../src/main.c
 Invoking: MCU GCC Compiler
@@ -16,10 +16,28 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "STM32_Task_Notify.elf" "STM32_Task_Notify.bin"
 arm-none-eabi-size "STM32_Task_Notify.elf"
    text	   data	    bss	    dec	    hex	filename
-  17520	   1120	  96436	 115076	  1c184	STM32_Task_Notify.elf
+  37488	   2532	  96496	 136516	  21544	STM32_Task_Notify.elf
  
-10:39:27 **** Programming project STM32_Task_Notify on chip ****
-"D:\\ProgramFiles\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.23.0.201904120827\\tools\\openocd\\bin\\openocd.exe" -f stm32.flash.437461896732656828.cfg -s "D:\\EmbeddedCodes\\RTOS_Workspace\\STM32_Task_Notify" -s "D:\\ProgramFiles\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_2.5.0.201904120827\\resources\\openocd\\st_scripts" -c "program Debug/STM32_Task_Notify.elf verify reset " -c shutdown 
+10:59:34 **** Programming project STM32_Task_Notify on chip ****
+"D:\\ProgramFiles\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.23.0.201904120827\\tools\\openocd\\bin\\openocd.exe" -f stm32.flash.3035644059342426274.cfg -s "D:\\EmbeddedCodes\\RTOS_Workspace\\STM32_Task_Notify" -s "D:\\ProgramFiles\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_2.5.0.201904120827\\resources\\openocd\\st_scripts" -c "program Debug/STM32_Task_Notify.elf verify reset " -c shutdown 
+Open On-Chip Debugger 0.10.0+dev-00021-g524e8c8 (2019-04-12-08:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+srst_only separate srst_nogate srst_open_drain connect_assert_srst
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 8000 kHz
+adapter_nsrst_delay: 100
+Info : clock speed 8000 kHz
+Error: open failed (no matching adapter found)
+in procedure 'program' 
+in procedure 'init' called at file "embedded:startup.tcl", line 495
+in procedure 'ocd_bouncer'
+** OpenOCD init failed **
+shutdown command invoked
+
+11:00:02 **** Programming project STM32_Task_Notify on chip ****
+"D:\\ProgramFiles\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.23.0.201904120827\\tools\\openocd\\bin\\openocd.exe" -f stm32.flash.1085516676785881789.cfg -s "D:\\EmbeddedCodes\\RTOS_Workspace\\STM32_Task_Notify" -s "D:\\ProgramFiles\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_2.5.0.201904120827\\resources\\openocd\\st_scripts" -c "program Debug/STM32_Task_Notify.elf verify reset " -c shutdown 
 Open On-Chip Debugger 0.10.0+dev-00021-g524e8c8 (2019-04-12-08:48)
 Licensed under GNU GPL v2
 For bug reports, read
@@ -31,13 +49,13 @@ adapter_nsrst_delay: 100
 Info : clock speed 8000 kHz
 Info : STLINK v2.1 JTAG v37 API v2 M27 VID 0x0483 PID 0x374B
 Info : using stlink api v2
-Info : Target voltage: 3.257369
+Info : Target voltage: 3.251053
 Info : Unable to match requested speed 8000 kHz, using 4000 kHz
 Info : Stlink adapter speed set to 4000 kHz
 Info : STM32F446RETx.cpu: hardware has 6 breakpoints, 4 watchpoints
 Info : Listening on port 3333 for gdb connections
 target halted due to debug-request, current mode: Thread 
-xPSR: 0x01000000 pc: 0x080042c0 msp: 0x20020000
+xPSR: 0x01000000 pc: 0x08004094 msp: 0x20020000
 configuring PLL
 Info : Unable to match requested speed 8000 kHz, using 4000 kHz
 Info : Stlink adapter speed set to 4000 kHz
@@ -49,14 +67,14 @@ Info : device id = 0x10006421
 Info : flash size = 512kbytes
 target halted due to breakpoint, current mode: Thread 
 xPSR: 0x61000000 pc: 0x20000046 msp: 0x20020000
-wrote 32768 bytes from file Debug/STM32_Task_Notify.elf in 1.035062s (30.916 KiB/s)
+wrote 49152 bytes from file Debug/STM32_Task_Notify.elf in 1.550492s (30.958 KiB/s)
 ** Programming Finished **
 ** Verify Started **
 target halted due to breakpoint, current mode: Thread 
 xPSR: 0x61000000 pc: 0x2000002e msp: 0x20020000
 target halted due to breakpoint, current mode: Thread 
 xPSR: 0x61000000 pc: 0x2000002e msp: 0x20020000
-verified 18700 bytes in 0.218550s (83.559 KiB/s)
+verified 40084 bytes in 0.355822s (110.012 KiB/s)
 ** Verified OK **
 ** Resetting Target **
 shutdown command invoked
