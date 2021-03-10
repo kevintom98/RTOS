@@ -87,11 +87,6 @@ int main(void)
 	vTaskStartScheduler();
 
 	for(;;);
-
-
-
-
-
 }
 
 
@@ -185,7 +180,6 @@ static void prvSetupUART(void)
 	uart2_init.USART_WordLength = USART_WordLength_8b;
 	USART_Init(USART2, &uart2_init);
 
-
 	//5. Enable the UART2 peripheral
 	USART_Cmd(USART2, ENABLE);
 
@@ -201,7 +195,6 @@ void prvSetupGPIO(void)
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE); //For enable interrupt(SYSCFG)
 
-
 	GPIO_InitTypeDef led_init, button_init;
 	led_init.GPIO_Mode = GPIO_Mode_OUT;
 	led_init.GPIO_OType = GPIO_OType_PP;
@@ -211,7 +204,7 @@ void prvSetupGPIO(void)
 	GPIO_Init(GPIOA, &led_init);
 
 	button_init.GPIO_Mode = GPIO_Mode_IN;
-	button_init.GPIO_OType = GPIO_OType_PP; //Not applicable so, even if it is PushPull there are no issues
+	button_init.GPIO_OType = GPIO_OType_PP; //Not applicable so, even if it is PushPull there is no problem
 	button_init.GPIO_Pin = GPIO_Pin_13;     //Button is connected to PC13
 	button_init.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	button_init.GPIO_Speed = GPIO_Low_Speed;

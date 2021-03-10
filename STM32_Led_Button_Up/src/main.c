@@ -152,6 +152,8 @@ static void prvSetupUART(void)
 	gpio_uart_pins.GPIO_PuPd =  GPIO_PuPd_UP;
 	GPIO_Init(GPIOA, &gpio_uart_pins);
 
+
+
 	//3.AF Mode setting for pins
 	GPIO_PinAFConfig(GPIOA, GPIO_PinSource2, GPIO_AF_USART2); //PA2
 	GPIO_PinAFConfig(GPIOA, GPIO_PinSource3, GPIO_AF_USART2); //PA3
