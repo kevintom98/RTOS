@@ -8,13 +8,6 @@
  *
  * Description
  * ```````````
- * Initially the button will be blink at 1Hz rate, after pressing the button
- * the toggling rate increases to 2Hz. The first task will get deleted and
- * second task with 2Hz rate get executed.
- *
- * Tasks:
- * Delete Task - Gets deleted when switch is pressed (1Hz toggling rate and has highest priority)
- * Led Blink Task - Gets executed when Delete Task gets deleted (2Hz toggling rate and has low priority than Delete Task)
  *
  * UART Details
  * ````````````
