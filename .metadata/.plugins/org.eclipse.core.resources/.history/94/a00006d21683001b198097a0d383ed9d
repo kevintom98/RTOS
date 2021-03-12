@@ -38,9 +38,7 @@ static void prvSetupHardware(void);
 static void prvSetupUART(void);
 static void prvSetupGPIO(void);
 void printmsg(char *msg);
-void vtask_led_delete_handler(void *params);
-void vtask_led_handler(void *prams);
-void  rtos_delay(uint32_t delay_in_ms);
+
 
 TaskHandle_t xTaskHandle1=NULL;
 TaskHandle_t xTaskHandle2=NULL;
@@ -70,53 +68,12 @@ int main(void)
 	SEGGER_SYSVIEW_Conf();
 	SEGGER_SYSVIEW_Start();
 
-	xTaskCreate(vtask_led_delete_handler, "Delete Task", 500, NULL, 2, &xTaskHandle1);
-	xTaskCreate(vtask_led_handler, "Led Blink Task", 500, NULL, 1, &xTaskHandle2);
-
-	vTaskStartScheduler();
+	xTaskCreate(vtask_led_delete_handler, "Delete Task", 500, NULL, 1, &xTaskHandle1);
+	xTaskCreate(vtask_led_handler, "Led Blink Task", 500, NULL, 2, &xTaskHandle2);
 
 	for(;;);
 }
 
-void vtask_led_delete_handler(void *params)
-{
-	//TickType_t current_tick=0;
-	sprintf(usr_msg, "Delete handler task is running \r\n");
-	printmsg(usr_msg);
-
-	while(1)
-	{
-
-		if(GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_13))
-		{
-			rtos_delay(1000);
-			GPIO_ToggleBits(GPIOA,GPIO_Pin_5);
-		}
-		else
-		{
-			sprintf(usr_msg, "Deleting task \r\n");
-			printmsg(usr_msg);
-			vTaskDelete(NULL);
-		}
-	}
-
-
-}
-
-void vtask_led_handler(void *prams)
-{
-	//TickType_t current_tick=0;
-	sprintf(usr_msg, "Delete handler task is running \r\n");
-	printmsg(usr_msg);
-
-	while(1)
-	{
-	rtos_delay(200);
-	GPIO_ToggleBits(GPIOA,GPIO_Pin_5);
-	}
-
-
-}
 
 static void prvSetupHardware(void)
 {
@@ -135,7 +92,7 @@ static void prvSetupUART(void)
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
 
 	//PA2 is USART2_TX and PA3 is USART2_RX(from data-sheet(alternate pin section of data-sheet))
-	memset(&gpio_uart_pins,0,sizeof(gpio_uart_pins));
+	memeset(&gpio_uart_pins,0,sizeof(gpio_uart_pins));
 	gpio_uart_pins.GPIO_Pin = GPIO_Pin_2 | GPIO_Pin_1;
 	gpio_uart_pins.GPIO_Mode = GPIO_Mode_AF;
 	gpio_uart_pins.GPIO_PuPd = GPIO_PuPd_UP;
@@ -193,11 +150,4 @@ void printmsg(char *msg)
 		while (USART_GetFlagStatus(USART2, USART_FLAG_TXE) != SET);
 		USART_SendData(USART2, msg[i]);
 	}
-}
-void  rtos_delay(uint32_t delay_in_ms)
-{
-	uint32_t current_tick = xTaskGetTickCount();
-	//Converting milli-second delay to ticks
-	uint32_t delay_in_ticks = (delay_in_ms * configTICK_RATE_HZ)/1000;
-	while(xTaskGetTickCount() < (current_tick + delay_in_ticks));
 }

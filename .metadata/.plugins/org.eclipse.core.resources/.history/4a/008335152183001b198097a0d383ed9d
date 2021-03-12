@@ -73,8 +73,6 @@ int main(void)
 	xTaskCreate(vtask_led_delete_handler, "Delete Task", 500, NULL, 2, &xTaskHandle1);
 	xTaskCreate(vtask_led_handler, "Led Blink Task", 500, NULL, 1, &xTaskHandle2);
 
-	vTaskStartScheduler();
-
 	for(;;);
 }
 

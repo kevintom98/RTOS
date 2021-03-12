@@ -70,51 +70,45 @@ int main(void)
 	SEGGER_SYSVIEW_Conf();
 	SEGGER_SYSVIEW_Start();
 
-	xTaskCreate(vtask_led_delete_handler, "Delete Task", 500, NULL, 2, &xTaskHandle1);
-	xTaskCreate(vtask_led_handler, "Led Blink Task", 500, NULL, 1, &xTaskHandle2);
-
-	vTaskStartScheduler();
+	xTaskCreate(vtask_led_delete_handler, "Delete Task", 500, NULL, 1, &xTaskHandle1);
+	xTaskCreate(vtask_led_handler, "Led Blink Task", 500, NULL, 2, &xTaskHandle2);
 
 	for(;;);
 }
 
 void vtask_led_delete_handler(void *params)
 {
-	//TickType_t current_tick=0;
-	sprintf(usr_msg, "Delete handler task is running \r\n");
-	printmsg(usr_msg);
-
-	while(1)
+	GPIO_WriteBit(GPIOA, GPIO_Pin_5,Bit_SET);
+	rtos_delay(1000);
+	GPIO_WriteBit(GPIOA, GPIO_Pin_5,Bit_RESET);
+	rtos_delay(1000);
+	if(!GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_13))
 	{
+		//Button is pressed
+		//Delay for button de-bouncing 100ms
+		rtos_delay(100);
+		//Send notification to LED task
+		xTaskNotify(xTaskHandle1,0x0,eNoAction);
+		//Deleteing the task
+		vTaskDelete(NULL);
 
-		if(GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_13))
-		{
-			rtos_delay(1000);
-			GPIO_ToggleBits(GPIOA,GPIO_Pin_5);
-		}
-		else
-		{
-			sprintf(usr_msg, "Deleting task \r\n");
-			printmsg(usr_msg);
-			vTaskDelete(NULL);
-		}
 	}
-
 
 }
 
 void vtask_led_handler(void *prams)
 {
-	//TickType_t current_tick=0;
-	sprintf(usr_msg, "Delete handler task is running \r\n");
-	printmsg(usr_msg);
-
-	while(1)
+	//Waiting until Notification is received from Button Task
+	if ( xTaskNotifyWait(0,0,0,portMAX_DELAY) == pdTRUE)
 	{
-	rtos_delay(200);
-	GPIO_ToggleBits(GPIOA,GPIO_Pin_5);
+		//Notification is received
+		sprintf(usr_msg, "Notification received : Button press count : \r\n");
+		printmsg(usr_msg);
+		GPIO_WriteBit(GPIOA, GPIO_Pin_5,Bit_SET);
+		rtos_delay(1000);
+		GPIO_WriteBit(GPIOA, GPIO_Pin_5,Bit_RESET);
+		rtos_delay(1000);
 	}
-
 
 }
 
