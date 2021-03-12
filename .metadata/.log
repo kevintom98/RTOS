@@ -1603,3 +1603,9 @@ Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING
 
 !ENTRY org.eclipse.launchbar.core 2 0 2021-03-12 16:19:45.439
 !MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-03-12 16:34:43.422
+!MESSAGE Indexed 'STM32_Task_Delete_Updated' (46 sources, 98 headers) in 1.71 sec: 8,654 declarations; 33,698 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-03-12 17:02:44.061
+!MESSAGE Indexed 'STM32_Task_Delete_Updated' (59 sources, 129 headers) in 2.02 sec: 11,778 declarations; 47,740 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
