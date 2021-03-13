@@ -100,9 +100,9 @@ void vtask_led_delete_handler(void *params)
 		if(GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_13))
 		{
 			sprintf(usr_msg, "Deleting task \r\n");
+			xTaskNotify(xTaskHandle2,0x0,eNoAction);
 			printmsg(usr_msg);
 			vTaskDelete(NULL);
-			xTaskNotify(xTaskHandle2,0x0,eNoAction);
 		}
 	}
 }

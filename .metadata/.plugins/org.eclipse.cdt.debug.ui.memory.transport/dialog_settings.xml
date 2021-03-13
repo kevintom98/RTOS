@@ -3,7 +3,7 @@
 	<section name="EXPORT_DIALOG">
 		<item value="0x2001364c" key="Start"/>
 		<item value="0x2001564a" key="End"/>
-		<item value="D:\EmbeddedCodes\RTOS_Workspace\STM32_Led_Button_Up\SEGGER_Memory_Dumps\001freertos_lb_up.SVdat" key="File"/>
+		<item value="D:\EmbeddedCodes\RTOS_Workspace\STM32_Task_Delete\SEGGER_Memory_Dump\001freertos_taskdelete.SVdat" key="File"/>
 		<item value="rawbinary" key="SELECTED_EXPORTER"/>
 		<item value="0x2001364c" key="Initial address"/>
 	</section>
