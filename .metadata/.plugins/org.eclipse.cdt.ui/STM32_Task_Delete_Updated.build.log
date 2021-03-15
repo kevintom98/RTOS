@@ -1,4 +1,4 @@
-17:21:49 **** Incremental Build of configuration Debug for project STM32_Task_Delete_Updated ****
+11:38:31 **** Build of configuration Debug for project STM32_Task_Delete_Updated ****
 make -j8 all 
 Building file: ../src/main.c
 Invoking: MCU GCC Compiler
@@ -16,8 +16,8 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "STM32_Task_Delete_Updated.elf" "STM32_Task_Delete_Updated.bin"
 arm-none-eabi-size "STM32_Task_Delete_Updated.elf"
    text	   data	    bss	    dec	    hex	filename
-  18620	   1120	  96332	 116072	  1c568	STM32_Task_Delete_Updated.elf
+  17796	   1120	  96332	 115248	  1c230	STM32_Task_Delete_Updated.elf
  
 
-17:21:53 Build Finished (took 4s.47ms)
+11:38:41 Build Finished (took 10s.41ms)
 

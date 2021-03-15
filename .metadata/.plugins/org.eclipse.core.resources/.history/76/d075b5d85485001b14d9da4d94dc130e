@@ -101,6 +101,7 @@ void vtask_led_delete_handler(void *params)
 		{
 			sprintf(usr_msg, "Deleting task \r\n");
 			printmsg(usr_msg);
+			vTaskDelete(NULL);
 			xTaskNotify(xTaskHandle2,0x0,eNoAction);
 		}
 	}

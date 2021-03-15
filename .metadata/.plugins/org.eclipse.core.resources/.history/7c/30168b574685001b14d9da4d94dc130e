@@ -8,8 +8,13 @@
  *
  * Description
  * ```````````
- * This program will toggle on-board LED when the user switch is pressed.
- * Uses TaskNotification API to preempt tasks.
+ * Initially the button will be blink at 1Hz rate, after pressing the button
+ * the toggling rate increases to 2Hz. The first task will get deleted and
+ * second task with 2Hz rate get executed.
+ *
+ * Tasks:
+ * Delete Task - Gets deleted when switch is pressed (1Hz toggling rate and has highest priority)
+ * Led Blink Task - Gets executed when Delete Task gets deleted (2Hz toggling rate and has low priority than Delete Task)
  *
  * UART Details
  * ````````````
@@ -26,8 +31,6 @@
  *
  */
 
-
-
 //Header files
 #include <stdio.h>
 #include <stdint.h>
@@ -36,28 +39,22 @@
 #include "stm32f4xx.h"
 #include "FreeRTOS.h"
 #include "task.h"
-
-
-
-
-TaskHandle_t xTaskHandle1=NULL;
-TaskHandle_t xTaskHandle2=NULL;
 			
 //Function prototypes
 static void prvSetupHardware(void);
-void printmsg(char *msg);
 static void prvSetupUART(void);
-void prvSetupGPIO(void);
-void vtask_led_handler(void *params);
-void vtask_button_handler(void *params);
+static void prvSetupGPIO(void);
+void printmsg(char *msg);
+void vtask_led_delete_handler(void *params);
+void vtask_led_handler(void *prams);
 void  rtos_delay(uint32_t delay_in_ms);
 
-//Global variable section
-char usr_msg[200]={0};
+TaskHandle_t xTaskHandle1=NULL;
+TaskHandle_t xTaskHandle2=NULL;
 
 
 
-
+char usr_msg[100];
 
 
 int main(void)
@@ -74,77 +71,63 @@ int main(void)
 
 	prvSetupHardware();
 
-	sprintf(usr_msg,"Task Notification API Project");
+	sprintf(usr_msg,"Task Deletion API Project (Idea Testing)");
 	printmsg(usr_msg);
 
 	SEGGER_SYSVIEW_Conf();
 	SEGGER_SYSVIEW_Start();
 
-	xTaskCreate(vtask_led_handler,"LED-Task",500,NULL,2,&xTaskHandle1 ); //500 is given as stack memory as we are using APIs, we need more memory
-	xTaskCreate(vtask_button_handler,"Button-Task",500,NULL,2,&xTaskHandle2 );
+	xTaskCreate(vtask_led_delete_handler, "Delete Task", 500, NULL, 2, &xTaskHandle1);
+	xTaskCreate(vtask_led_handler, "Led Blink Task", 500, NULL, 1, &xTaskHandle2);
 
-	//Start the scheduler
 	vTaskStartScheduler();
 
 	for(;;);
 }
 
-
-
-
-
-void vtask_led_handler(void *params)
+void vtask_led_delete_handler(void *params)
 {
+	//TickType_t current_tick=0;
+	sprintf(usr_msg, "Delete handler task is running \r\n");
+	printmsg(usr_msg);
+
 	while(1)
 	{
-		//Waiting until Notification is received from Button Task
-		if ( xTaskNotifyWait(0,0,NULL,portMAX_DELAY) == pdTRUE)
+		GPIO_WriteBit(GPIOA, GPIO_Pin_5,Bit_SET);
+		rtos_delay(1000);
+		GPIO_WriteBit(GPIOA, GPIO_Pin_5,Bit_RESET);
+		rtos_delay(1000);
+		if(GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_13))
 		{
-			//Notification is received
-			GPIO_ToggleBits(GPIOA, GPIO_Pin_5);
-			sprintf(usr_msg, "Notification received \r\n");
+			sprintf(usr_msg, "Deleting task \r\n");
 			printmsg(usr_msg);
+			vTaskDelete(NULL);
+			xTaskNotify(xTaskHandle2,0x0,eNoAction);
 		}
 	}
 }
 
-void vtask_button_handler(void *params)
+void vtask_led_handler(void *prams)
 {
+	//TickType_t current_tick=0;
+	sprintf(usr_msg, "Led task is running \r\n");
+	printmsg(usr_msg);
+
 	while(1)
 	{
-		if(!GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_13))
+		if( xTaskNotifyWait(0,0,NULL,portMAX_DELAY) == pdTRUE )
 		{
-			//Button is pressed
-			//Delay for button de-bouncing 100ms
-			rtos_delay(100);
-
-			//Send notification to LED task
-			xTaskNotify(xTaskHandle1, 0x0, eNoAction);
+			vTaskDelay(200); //This function will run Idle task
+			GPIO_ToggleBits(GPIOA,GPIO_Pin_5);
 		}
 	}
 }
-
-
 
 static void prvSetupHardware(void)
 {
-	//Setup UART
 	prvSetupUART();
 	prvSetupGPIO();
 }
-
-
-void printmsg(char *msg)
-{
-	for(uint32_t i=0; i<strlen(msg); i++)
-	{
-		while (USART_GetFlagStatus(USART2, USART_FLAG_TXE) != SET);
-		USART_SendData(USART2, msg[i]);
-	}
-}
-
-
-
 
 static void prvSetupUART(void)
 {
@@ -152,25 +135,22 @@ static void prvSetupUART(void)
 	GPIO_InitTypeDef gpio_uart_pins;
 	USART_InitTypeDef uart2_init;
 
-	//1. Enable UART2 and GPIOA (Because COM port uses UART2 of Nucleo board) peripheral port
+	//Enabling UART and GPIO peripheral port clocks
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
 
 	//PA2 is USART2_TX and PA3 is USART2_RX(from data-sheet(alternate pin section of data-sheet))
-
-	//2. Alternate function enabling on PA2 and PA3
-	//Setting each and every member of the structure
 	memset(&gpio_uart_pins,0,sizeof(gpio_uart_pins));
-	gpio_uart_pins.GPIO_Pin = GPIO_Pin_2 | GPIO_Pin_3;
+	gpio_uart_pins.GPIO_Pin = GPIO_Pin_2 | GPIO_Pin_1;
 	gpio_uart_pins.GPIO_Mode = GPIO_Mode_AF;
-	gpio_uart_pins.GPIO_PuPd =  GPIO_PuPd_UP;
+	gpio_uart_pins.GPIO_PuPd = GPIO_PuPd_UP;
 	GPIO_Init(GPIOA, &gpio_uart_pins);
 
-	//3.AF Mode setting for pins
+	//Alternate Function Mode setting for pins
 	GPIO_PinAFConfig(GPIOA, GPIO_PinSource2, GPIO_AF_USART2); //PA2
 	GPIO_PinAFConfig(GPIOA, GPIO_PinSource3, GPIO_AF_USART2); //PA3
 
-	//4. Parameter initialization of UART
+	//Enabling UART
 	memset(&uart2_init,0,sizeof(uart2_init));
 	uart2_init.USART_BaudRate = 115200;
 	uart2_init.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
@@ -180,16 +160,14 @@ static void prvSetupUART(void)
 	uart2_init.USART_WordLength = USART_WordLength_8b;
 	USART_Init(USART2, &uart2_init);
 
-	//5. Enable the UART2 peripheral
 	USART_Cmd(USART2, ENABLE);
 
 }
 
 
-
-
-void prvSetupGPIO(void)
+static void prvSetupGPIO(void)
 {
+
 	//Please note that this function is board specific
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
@@ -209,30 +187,21 @@ void prvSetupGPIO(void)
 	button_init.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	button_init.GPIO_Speed = GPIO_Low_Speed;
 	GPIO_Init(GPIOC, &button_init);
-
-	//Interrupt configuration (Button is connected to PC13)
-	//Enabling External Interrupt (Port C pin 13 so EXTI13 we have to configure)
-	//SYSCFG Setting
-	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOC, EXTI_PinSource13);
-
-	//EXTI Line configuration
-	EXTI_InitTypeDef exti_init;
-	exti_init.EXTI_Line = EXTI_Line13;
-	exti_init.EXTI_Mode = EXTI_Mode_Interrupt;
-	exti_init.EXTI_Trigger = EXTI_Trigger_Falling;
-	exti_init.EXTI_LineCmd = ENABLE;  // Enabling the interrupt line
-	EXTI_Init(&exti_init);
-
-	//NVIC Settings(IRQ Setting EXTI line is coming and hitting NVIC, so we should choose the IRQ number)
-	//All interrupts from pin 10-15 has a single IRQ number (Position=40)
-
-	NVIC_SetPriority(EXTI15_10_IRQn,5);
-	NVIC_EnableIRQ(EXTI15_10_IRQn);
 }
 
 
 
+//Function to print any message through UART(Mainly used for debugging)
+void printmsg(char *msg)
+{
+	for(uint32_t i=0; i<strlen(msg); i++)
+	{
+		while (USART_GetFlagStatus(USART2, USART_FLAG_TXE) != SET);
+		USART_SendData(USART2, msg[i]);
+	}
+}
 
+//Custom delay function
 void  rtos_delay(uint32_t delay_in_ms)
 {
 	uint32_t current_tick = xTaskGetTickCount();

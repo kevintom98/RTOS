@@ -101,6 +101,7 @@ void vtask_led_delete_handler(void *params)
 		{
 			sprintf(usr_msg, "Deleting task \r\n");
 			printmsg(usr_msg);
+			vTaskDelete(NULL);
 			xTaskNotify(xTaskHandle2,0x0,eNoAction);
 		}
 	}
@@ -116,10 +117,8 @@ void vtask_led_handler(void *prams)
 	{
 		if( xTaskNotifyWait(0,0,NULL,portMAX_DELAY) == pdTRUE )
 		{
-			GPIO_WriteBit(GPIOA, GPIO_Pin_5,Bit_SET);
-			rtos_delay(500);
-			GPIO_WriteBit(GPIOA, GPIO_Pin_5,Bit_RESET);
-			rtos_delay(500);
+			vTaskDelay(200); //This function will run Idle task
+			GPIO_ToggleBits(GPIOA,GPIO_Pin_5);
 		}
 	}
 }
