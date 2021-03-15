@@ -69,29 +69,22 @@ int main(void)
 	//Update the SystemCoreClock variable
 	SystemCoreClockUpdate();
 
-	//Function has all the hardware setup functions like USART, GPIO
 	prvSetupHardware();
 
 	sprintf(usr_msg,"Task Deletion API Project (Idea Testing)");
 	printmsg(usr_msg);
 
-	//Starting SEGGER files
 	SEGGER_SYSVIEW_Conf();
 	SEGGER_SYSVIEW_Start();
 
-	//Creating tasks
 	xTaskCreate(vtask_led_delete_handler, "Delete Task", 500, NULL, 2, &xTaskHandle1);
 	xTaskCreate(vtask_led_handler, "Led Blink Task", 500, NULL, 1, &xTaskHandle2);
 
-	//Starting the scheduler
 	vTaskStartScheduler();
 
-	//Infinite loop
 	for(;;);
 }
 
-
-//Task handler for
 void vtask_led_delete_handler(void *params)
 {
 	//TickType_t current_tick=0;
