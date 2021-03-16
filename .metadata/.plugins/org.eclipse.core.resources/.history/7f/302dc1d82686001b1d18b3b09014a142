@@ -104,13 +104,13 @@ void led_task_handler(void *params)
 	{
 		if(button_status_flag == PRESSED)
 		{
-			//Turn ON the LED
+			//Turn ON
 			GPIO_WriteBit(GPIOA, GPIO_Pin_5,Bit_SET);
 
 		}
 		else
 		{
-			//Turn OFF the LED
+			//Turn OFF
 			GPIO_WriteBit(GPIOA, GPIO_Pin_5,Bit_RESET);
 		}
 	}

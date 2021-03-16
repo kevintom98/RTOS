@@ -76,10 +76,8 @@ int main(void)
 	//2.Update the SystemCoreClock variable
 	SystemCoreClockUpdate();
 
-	//Calling function to setup hardware like UART and GPIO
 	prvSetupHardware();
 
-	//SEGGGER SystemView Configuration
 	SEGGER_SYSVIEW_Conf();
 	SEGGER_SYSVIEW_Start();
 
@@ -97,27 +95,27 @@ int main(void)
 
 
 
-//Task handler function for switching on LED according to button status
+//Task handler fucntion
 void led_task_handler(void *params)
 {
 	while(1)
 	{
 		if(button_status_flag == PRESSED)
 		{
-			//Turn ON the LED
+			//Turn ON
 			GPIO_WriteBit(GPIOA, GPIO_Pin_5,Bit_SET);
 
 		}
 		else
 		{
-			//Turn OFF the LED
+			//Turn OFF
 			GPIO_WriteBit(GPIOA, GPIO_Pin_5,Bit_RESET);
 		}
 	}
 }
 
 
-//Task handler function for checking if the button is pressed or not
+//Task handler function
 void button_task_handler(void *params)
 {
 	while(1)
@@ -140,13 +138,11 @@ void button_task_handler(void *params)
 //Function for calling hardware port setup files
 static void prvSetupHardware(void)
 {
-	//Setup UART
+ //Setup UART
 	prvSetupUART();
-	//Setup GPIO
 	prvSetupGPIO();
 
 }
-
 
 //Function for printing message over UART
 void printmsg(char *msg)
@@ -158,8 +154,6 @@ void printmsg(char *msg)
 	}
 }
 
-
-//Function for setting up UART
 static void prvSetupUART(void)
 {
 
@@ -202,7 +196,6 @@ static void prvSetupUART(void)
 }
 
 
-//Function for setting up GPIO
 void prvSetupGPIO(void)
 {
 	//Please note that this function is board specific
