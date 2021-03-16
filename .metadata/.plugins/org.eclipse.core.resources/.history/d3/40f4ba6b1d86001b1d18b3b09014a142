@@ -202,6 +202,7 @@ void prvSetupGPIO(void)
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
 
+
 	GPIO_InitTypeDef led_init, button_init;
 	led_init.GPIO_Mode = GPIO_Mode_OUT;
 	led_init.GPIO_OType = GPIO_OType_PP;

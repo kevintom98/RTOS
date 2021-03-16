@@ -25,17 +25,14 @@
  *
  */
 
-//Including library files
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
 
-//Library files related to STM32 and FreeRTOS
 #include "stm32f4xx.h"
 #include "FreeRTOS.h"
 #include "task.h"
 
-//Initializing Task handle
 TaskHandle_t xTaskHandle1=NULL;
 TaskHandle_t xTaskHandle2=NULL;
 
@@ -50,8 +47,6 @@ void vTask2_handler(void *params);
 extern void initialise_monitor_handles();
 #endif
 
-
-//Function prototypes
 static void prvSetupHardware(void);
 static void prvSetupUART(void);
 
@@ -61,13 +56,14 @@ void printmsg(char *msg);
 
 
 //Macros section
+
 #define TRUE 1
 #define FALSE 0
 
 #define AVAILABLE TRUE
 #define NOT_AVAILABLE FALSE
 
-//Global variables
+//Global variable section
 char usr_msg[200]={0};
 uint8_t UART_ACCESS_KEY = AVAILABLE;
 
@@ -116,15 +112,13 @@ int main(void)
 
 void vTask1_handler(void *params)
 {
-	//Always the task handler should be in infinite loop
 	while(1)
 	{
-		//Proceed only if UART KEY is AVAILABLE (It will only become AVAILABLE when Transmission is complete)
 		if(UART_ACCESS_KEY == AVAILABLE)
 		{
-			UART_ACCESS_KEY = NOT_AVAILABLE; //Making Key NOT_AVAILABLE until transmission is complete
+			UART_ACCESS_KEY = NOT_AVAILABLE;
 			printmsg("Hello world from task-1\r\n");
-			UART_ACCESS_KEY = AVAILABLE; //Making KEY available after transmission
+			UART_ACCESS_KEY = AVAILABLE;
 			SEGGER_SYSVIEW_Print("Task-1 is yielding");
 			traceISR_EXIT_TO_SCHEDULER(); //Used for displaying PendSV black line in SEGGER
 			taskYIELD();   //Manual switching
@@ -138,9 +132,9 @@ void vTask2_handler(void *params)
 	{
 		if(UART_ACCESS_KEY == AVAILABLE)
 		{
-			UART_ACCESS_KEY = NOT_AVAILABLE; //Making Key NOT_AVAILABLE until transmission is complete
+			UART_ACCESS_KEY = NOT_AVAILABLE;
 			printmsg("Hello world from task-2\r\n");
-			UART_ACCESS_KEY = AVAILABLE; //Making KEY available after transmission
+			UART_ACCESS_KEY = AVAILABLE;
 			SEGGER_SYSVIEW_Print("Task-2 is yielding");
 			traceISR_EXIT_TO_SCHEDULER();  //Used for displaying PendSV black line in SEGGER
 			taskYIELD(); //Manual switching
@@ -152,7 +146,6 @@ void vTask2_handler(void *params)
 static void prvSetupUART(void)
 {
 
-	//Define GPIO and UART class variables
 	GPIO_InitTypeDef gpio_uart_pins;
 	USART_InitTypeDef uart2_init;
 
@@ -191,16 +184,12 @@ static void prvSetupUART(void)
 
 }
 
-
-//Function for calling hardware setup functions
 static void prvSetupHardware(void)
 {
  //Setup UART
 	prvSetupUART();
 }
 
-
-//Function for printing message over UART
 void printmsg(char *msg)
 {
 	for(uint32_t i=0; i<strlen(msg); i++)
