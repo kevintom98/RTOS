@@ -53,7 +53,7 @@ TaskHandle_t xTaskHandle1=NULL;
 TaskHandle_t xTaskHandle2=NULL;
 
 
-//Array declaration for printing over UART
+//Array decelration for printing over UART
 char usr_msg[100];
 
 
