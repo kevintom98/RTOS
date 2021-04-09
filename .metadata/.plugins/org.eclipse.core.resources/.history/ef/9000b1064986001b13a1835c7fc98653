@@ -113,8 +113,6 @@ void vtask_led_delete_handler(void *params)
 	}
 }
 
-
-//This task runs after pressing the switch
 void vtask_led_handler(void *prams)
 {
 	sprintf(usr_msg, "Led task is running \r\n");

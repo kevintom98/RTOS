@@ -75,7 +75,7 @@ int main(void)
 	sprintf(usr_msg,"Task Deletion API Project");
 	printmsg(usr_msg);
 
-	//SEGGER System View configuration
+	//SEGGER System View conficuration
 	SEGGER_SYSVIEW_Conf();
 	SEGGER_SYSVIEW_Start();
 
@@ -89,8 +89,6 @@ int main(void)
 	for(;;);
 }
 
-
-//This task gets deleted after pressing the switch
 void vtask_led_delete_handler(void *params)
 {
 	sprintf(usr_msg, "Delete handler task is running \r\n");
@@ -113,8 +111,6 @@ void vtask_led_delete_handler(void *params)
 	}
 }
 
-
-//This task runs after pressing the switch
 void vtask_led_handler(void *prams)
 {
 	sprintf(usr_msg, "Led task is running \r\n");
